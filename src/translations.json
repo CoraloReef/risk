@@ -1,0 +1,12 @@
+{
+  "en": {
+    "application": {
+      "introtext": "Hello, World!"
+    }
+  },
+  "ru": {
+    "application": {
+      "introtext": "Привет, Мир!"
+    }
+  }
+}

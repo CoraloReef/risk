@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>React GVS</h1>
+        <h1>Risk</h1>
       </div>
     );
   }
