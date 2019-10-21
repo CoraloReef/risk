@@ -1,13 +1,14 @@
 import React from 'react';
-import '../styles/app.css';
+import { Container } from 'react-bootstrap';
+import Battlefield from './Battlefield';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Risk</h1>
-      </div>
+      <Container>
+        <Battlefield />
+      </Container>
     );
   }
 }
