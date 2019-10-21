@@ -1,21 +1,23 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+
+import Ceil from './Ceil';
 
 class Battlefield extends React.Component {
   static width = 12;
   static height = 6;
 
-  createField = () => {
-    return (
-      <Col>1</Col>
-    );
+  createRow = () => {
+    let row = <Ceil />;
+
+    return row;
   }
 
   render() {
     return (
-        <Row>
-          {this.createField()}
-        </Row>
+      <Row>
+        {this.createRow()}
+      </Row>
     );
   }
 }

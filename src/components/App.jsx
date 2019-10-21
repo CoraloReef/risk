@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+
 import Battlefield from './Battlefield';
 
 // eslint-disable-next-line react/prefer-stateless-function
