@@ -4,7 +4,7 @@ import { i18nReducer } from 'react-redux-i18n';
 import * as actions from '../actions';
 
 const continents = handleActions({
-  [actions.addContinent](state, { payload: { continent } }) {
+  [actions.addContinent](state, { payload: continent }) {
     const { byId, allIds } = state;
     return {
       byId: { ...byId, [continent.id]: continent },
@@ -14,7 +14,7 @@ const continents = handleActions({
 }, { byId: {}, allIds: [] });
 
 const territories = handleActions({
-  [actions.addTerritory](state, { payload: { territory } }) {
+  [actions.addTerritory](state, { payload: territory }) {
     const { byId, allIds } = state;
     return {
       byId: { ...byId, [territory.id]: territory },
