@@ -1,17 +1,31 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Container } from 'react-bootstrap';
+import { I18n } from 'react-redux-i18n';
 
-import Battlefield from './Battlefield';
+import * as actions from '../actions';
+import LanguagesSwitcher from './LanguagesSwitcher';
+import Polygon from './Polygon';
 
-// eslint-disable-next-line react/prefer-stateless-function
+const mapStateToProps = (state) => {
+  const { locale } = state.i18n;
+  return { locale };
+};
+
+const actionCreators = { };
+
 class App extends React.Component {
   render() {
     return (
-      <Container>
-        <Battlefield />
-      </Container>
+      <div>
+        <LanguagesSwitcher />
+        <Container>
+          <h1>{I18n.t('app.heading')}</h1>
+          <Polygon />
+        </Container>
+      </div>
     );
   }
 }
 
-export default App;
+export default connect(mapStateToProps, actionCreators)(App);

@@ -1,12 +1,12 @@
 {
   "en": {
-    "application": {
-      "introtext": "Hello, World!"
+    "app": {
+      "heading": "Risk online"
     }
   },
   "ru": {
-    "application": {
-      "introtext": "Привет, Мир!"
+    "app": {
+      "heading": "Risk онлайн"
     }
   }
 }

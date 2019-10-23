@@ -1,0 +1,218 @@
+{
+  "continets": [
+    {
+      "id": "1",
+      "name": "North America",
+      "weight": "10",
+      "data": [
+        {
+          "id": "1",
+          "name": "Alaska"
+        },
+        {
+          "id": "2",
+          "name": "North Canada"
+        },
+        {
+          "id": "3",
+          "name": "Greenland"
+        },
+        {
+          "id": "4",
+          "name": "Alberta"
+        },
+        {
+          "id": "5",
+          "name": "Alberta"
+        },
+        {
+          "id": "6",
+          "name": "Ontario"
+        },
+        {
+          "id": "7",
+          "name": "Quebec"
+        },
+        {
+          "id": "8",
+          "name": "Western US"
+        },
+        {
+          "id": "9",
+          "name": "Eastern US"
+        },
+        {
+          "id": "10",
+          "name": "Central America"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "South America",
+      "weight": "4",
+      "data": [
+        {
+          "id": "1",
+          "name": "Venezuela"
+        },
+        {
+          "id": "2",
+          "name": "Peru"
+        },
+        {
+          "id": "3",
+          "name": "Brazil"
+        },
+        {
+          "id": "4",
+          "name": "Argentina"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Europe",
+      "weight": "7",
+      "data": [
+        {
+          "id": "1",
+          "name": "Iceland"
+        },
+        {
+          "id": "2",
+          "name": "Scandinavia"
+        },
+        {
+          "id": "3",
+          "name": "Great Britain"
+        },
+        {
+          "id": "4",
+          "name": "Northern Europe"
+        },
+        {
+          "id": "5",
+          "name": "Eastern Russia"
+        },
+        {
+          "id": "6",
+          "name": "Western Europe"
+        },
+        {
+          "id": "7",
+          "name": "Southern Europe"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Asia",
+      "weight": "12",
+      "data": [
+        {
+          "id": "1",
+          "name": "Ural"
+        },
+        {
+          "id": "2",
+          "name": "Syberia"
+        },
+        {
+          "id": "3",
+          "name": "Yakutsk"
+        },
+        {
+          "id": "4",
+          "name": "Kamchatka"
+        },
+        {
+          "id": "5",
+          "name": "Irkutsk"
+        },
+        {
+          "id": "6",
+          "name": "Afganistan"
+        },
+        {
+          "id": "7",
+          "name": "China"
+        },
+        {
+          "id": "8",
+          "name": "Mongolia"
+        },
+        {
+          "id": "9",
+          "name": "Japan"
+        },
+        {
+          "id": "10",
+          "name": "Middle East"
+        },
+        {
+          "id": "11",
+          "name": "India"
+        },
+        {
+          "id": "12",
+          "name": "Siam"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Africa",
+      "weight": "6",
+      "data": [
+        {
+          "id": "1",
+          "name": "North Africa"
+        },
+        {
+          "id": "2",
+          "name": "Egypt"
+        },
+        {
+          "id": "3",
+          "name": "Congo"
+        },
+        {
+          "id": "4",
+          "name": "East Africa"
+        },
+        {
+          "id": "5",
+          "name": "South Africa"
+        },
+        {
+          "id": "6",
+          "name": "Madagascar"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Australia",
+      "weight": "4",
+      "data": [
+        {
+          "id": "1",
+          "name": "Indonesia"
+        },
+        {
+          "id": "2",
+          "name": "New Guinea"
+        },
+        {
+          "id": "3",
+          "name": "Western Australia"
+        },
+        {
+          "id": "4",
+          "name": "Eastern Australia"
+        }
+      ]
+    }
+  ]
+}

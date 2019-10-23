@@ -5,7 +5,7 @@ class Ceil extends React.Component {
   render() {
     return (
       <Col>
-        1
+        {this.props.id}
       </Col>
     );
   }
