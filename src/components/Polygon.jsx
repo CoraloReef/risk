@@ -5,8 +5,10 @@ import territoriesObj from '../territories.json';
 import Ceil from './Ceil';
 
 const mapStateToProps = (state) => {
-  const { continents } = state;
-  return { continents };
+  const { territories: { byId, allIds } } = state;
+  const territories = allIds.map(id => byId[id]);
+
+  return { territories };
 };
 
 @connect(mapStateToProps)
@@ -37,7 +39,16 @@ class Polygon extends React.Component {
   }
 
   render() {
-    return null;
+    const { territories } = this.props;
+
+    return territories.map((territory) => (
+      <Ceil
+        id={territory.id}
+        name={territory.name}
+        contynentId={territory.idContinent}
+        key={territory.id}
+      />
+    ));
   }
 }
 

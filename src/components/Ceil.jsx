@@ -5,7 +5,9 @@ class Ceil extends React.Component {
   render() {
     return (
       <Col>
-        {this.props.id}
+        <p>Id: {this.props.id}</p>
+        <p>Cont id: {this.props.contynentId}</p>
+        <p>Name: {this.props.name}</p>
       </Col>
     );
   }
