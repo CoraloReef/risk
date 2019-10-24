@@ -1,14 +1,21 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import cn from 'classnames';
+import { I18n } from 'react-redux-i18n';
 
 class Ceil extends React.Component {
   render() {
+    const { contynentId, name } = this.props;
+
+    const terClass = cn({
+      territory: true,
+      [name]: true,
+      [`contynent-${contynentId}`]: true,
+    });
+
     return (
-      <Col>
-        <p>Id: {this.props.id}</p>
-        <p>Cont id: {this.props.contynentId}</p>
-        <p>Name: {this.props.name}</p>
-      </Col>
+      <div className={terClass}>
+        <p>{I18n.t(`territories.${name}`)}</p>
+      </div>
     );
   }
 }

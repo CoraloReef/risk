@@ -2,215 +2,211 @@
   "continents": [
     {
       "id": "1",
-      "name": "North America",
-      "weight": "10",
+      "name": "north-america",
+      "weight": "9",
       "data": [
         {
           "id": "1",
-          "name": "Alaska"
+          "name": "alaska"
         },
         {
           "id": "2",
-          "name": "North Canada"
+          "name": "north-canada"
         },
         {
           "id": "3",
-          "name": "Greenland"
+          "name": "greenland"
         },
         {
           "id": "4",
-          "name": "Alberta"
+          "name": "alberta"
         },
         {
           "id": "5",
-          "name": "Alberta"
+          "name": "ontario"
         },
         {
           "id": "6",
-          "name": "Ontario"
+          "name": "quebec"
         },
         {
           "id": "7",
-          "name": "Quebec"
+          "name": "western-us"
         },
         {
           "id": "8",
-          "name": "Western US"
+          "name": "eastern-us"
         },
         {
           "id": "9",
-          "name": "Eastern US"
-        },
-        {
-          "id": "10",
-          "name": "Central America"
+          "name": "central-america"
         }
       ]
     },
     {
       "id": "2",
-      "name": "South America",
+      "name": "south-america",
       "weight": "4",
       "data": [
         {
+          "id": "10",
+          "name": "venezuela"
+        },
+        {
           "id": "11",
-          "name": "Venezuela"
+          "name": "peru"
         },
         {
           "id": "12",
-          "name": "Peru"
+          "name": "brazil"
         },
         {
           "id": "13",
-          "name": "Brazil"
-        },
-        {
-          "id": "14",
-          "name": "Argentina"
+          "name": "argentina"
         }
       ]
     },
     {
       "id": "3",
-      "name": "Europe",
+      "name": "europe",
       "weight": "7",
       "data": [
         {
+          "id": "14",
+          "name": "iceland"
+        },
+        {
           "id": "15",
-          "name": "Iceland"
+          "name": "scandinavia"
         },
         {
           "id": "16",
-          "name": "Scandinavia"
+          "name": "great-britain"
         },
         {
           "id": "17",
-          "name": "Great Britain"
+          "name": "northern-europe"
         },
         {
           "id": "18",
-          "name": "Northern Europe"
+          "name": "eastern-russia"
         },
         {
           "id": "19",
-          "name": "Eastern Russia"
+          "name": "western-europe"
         },
         {
           "id": "20",
-          "name": "Western Europe"
-        },
-        {
-          "id": "21",
-          "name": "Southern Europe"
+          "name": "southern-europe"
         }
       ]
     },
     {
       "id": "4",
-      "name": "Asia",
+      "name": "asia",
       "weight": "12",
       "data": [
         {
+          "id": "21",
+          "name": "ural"
+        },
+        {
           "id": "22",
-          "name": "Ural"
+          "name": "syberia"
         },
         {
           "id": "23",
-          "name": "Syberia"
+          "name": "yakutsk"
         },
         {
           "id": "24",
-          "name": "Yakutsk"
+          "name": "kamchatka"
         },
         {
           "id": "25",
-          "name": "Kamchatka"
+          "name": "irkutsk"
         },
         {
           "id": "26",
-          "name": "Irkutsk"
+          "name": "afganistan"
         },
         {
           "id": "27",
-          "name": "Afganistan"
+          "name": "china"
         },
         {
           "id": "28",
-          "name": "China"
+          "name": "mongolia"
         },
         {
           "id": "29",
-          "name": "Mongolia"
+          "name": "japan"
         },
         {
           "id": "30",
-          "name": "Japan"
+          "name": "middle-east"
         },
         {
           "id": "31",
-          "name": "Middle East"
+          "name": "india"
         },
         {
           "id": "32",
-          "name": "India"
-        },
-        {
-          "id": "33",
-          "name": "Siam"
+          "name": "siam"
         }
       ]
     },
     {
       "id": "5",
-      "name": "Africa",
+      "name": "africa",
       "weight": "6",
       "data": [
         {
+          "id": "33",
+          "name": "north-africa"
+        },
+        {
           "id": "34",
-          "name": "North Africa"
+          "name": "egypt"
         },
         {
           "id": "35",
-          "name": "Egypt"
+          "name": "congo"
         },
         {
           "id": "36",
-          "name": "Congo"
+          "name": "east-africa"
         },
         {
           "id": "37",
-          "name": "East Africa"
+          "name": "south-africa"
         },
         {
           "id": "38",
-          "name": "South Africa"
-        },
-        {
-          "id": "39",
-          "name": "Madagascar"
+          "name": "madagascar"
         }
       ]
     },
     {
       "id": "6",
-      "name": "Australia",
+      "name": "australia",
       "weight": "4",
       "data": [
         {
+          "id": "39",
+          "name": "indonesia"
+        },
+        {
           "id": "40",
-          "name": "Indonesia"
+          "name": "new-guinea"
         },
         {
           "id": "41",
-          "name": "New Guinea"
+          "name": "western-australia"
         },
         {
           "id": "42",
-          "name": "Western Australia"
-        },
-        {
-          "id": "43",
-          "name": "Eastern Australia"
+          "name": "eastern-australia"
         }
       ]
     }
