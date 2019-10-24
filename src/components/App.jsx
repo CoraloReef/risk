@@ -17,11 +17,19 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <LanguagesSwitcher />
+        <header>
+          <LanguagesSwitcher />
+          <Container>
+            <Row>
+              <Col>
+                <h1 className="heading">{I18n.t('app.heading')}</h1>
+              </Col>
+            </Row>
+          </Container>
+        </header>
         <Container>
           <Row>
-            <Col>
-              <h1>{I18n.t('app.heading')}</h1>
+            <Col className="polygon">
               <Polygon />
             </Col>
           </Row>

@@ -6,7 +6,7 @@ import Ceil from './Ceil';
 
 const mapStateToProps = (state) => {
   const { territories: { byId, allIds } } = state;
-  const territories = allIds.map(id => byId[id]);
+  const territories = allIds.map((id) => byId[id]);
 
   return { territories };
 };

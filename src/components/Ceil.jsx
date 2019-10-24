@@ -14,7 +14,7 @@ class Ceil extends React.Component {
 
     return (
       <div className={terClass}>
-        <p>{I18n.t(`territories.${name}`)}</p>
+        <span className="ter-name">{I18n.t(`territories.${name}`)}</span>
       </div>
     );
   }

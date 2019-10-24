@@ -1,9 +1,9 @@
-.lang-switcher {
+.lang-switcher{
   position: absolute;
   right: 10px;
   top: 18px;
 }
-.links > a {
+.links > a{
   color: #636b6f;
   padding: 0 1rem;
   font-size: 1rem;
@@ -12,6 +12,302 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.links > a.active {
+.links > a.active{
   text-decoration: underline;
+}
+
+.polygon{
+  position: relative;
+}
+
+.territory{
+  border: 1px solid #636b6f;
+  text-align: center;
+  font-size: 0.8rem;
+
+	display: flex;
+	justify-content: center;
+  align-items: center;
+
+  position: absolute;
+}
+.ter-name{
+  color: #636b6f;
+}
+
+.contynent-1{
+  background-color: rgba(0, 0, 255, 0.1);
+}
+.contynent-2{
+  background-color: rgba(204, 0, 255, 0.1);
+}
+.contynent-3{
+  background-color: rgba(0, 255, 106, 0.1);
+}
+.contynent-4{
+  background-color: rgba(251, 255, 0, 0.1);
+}
+.contynent-5{
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.contynent-6{
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* North America */
+.alaska{
+  width: 60px;
+  height: 70px;
+  top: 50px;
+  left: 0px;
+}
+.north-canada{
+  width: 120px;
+  height: 50px;
+  top: 50px;
+  left: 60px;
+}
+.alberta{
+  width: 60px;
+  height: 60px;
+  top: 100px;
+  left: 60px;
+}
+.ontario{
+  width: 60px;
+  height: 60px;
+  top: 100px;
+  left: 120px;
+}
+.quebec{
+  width: 60px;
+  height: 60px;
+  top: 100px;
+  left: 180px;
+}
+.greenland{
+  width: 80px;
+  height: 90px;
+  top: 0px;
+  left: 220px;
+}
+.western-us{
+  width: 80px;
+  height: 80px;
+  top: 160px;
+  left: 60px;
+}
+.eastern-us{
+  width: 80px;
+  height: 80px;
+  top: 160px;
+  left: 140px;
+}
+.central-america{
+  width: 70px;
+  height: 120px;
+  top: 240px;
+  left: 75px;
+}
+.central-america span{
+  transform: rotate(90deg);
+}
+
+/* South America */
+.venezuela{
+  width: 130px;
+  height: 50px;
+  top: 360px;
+  left: 100px;
+}
+.peru{
+  width: 50px;
+  height: 130px;
+  top: 410px;
+  left: 80px;
+}
+.brazil{
+  width: 130px;
+  height: 130px;
+  top: 410px;
+  left: 130px;
+}
+.argentina{
+  width: 90px;
+  height: 130px;
+  top: 540px;
+  left: 100px;
+}
+
+/* Europe */
+.iceland{
+  width: 70px;
+  height: 40px;
+  top: 60px;
+  left: 380px;
+}
+.great-britain{
+  width: 50px;
+  height: 70px;
+  top: 110px;
+  left: 360px;
+}
+.great-britain span{
+  transform: rotate(60deg);
+  font-size: 0.6rem;
+}
+.western-europe{
+  width: 120px;
+  height: 50px;
+  top: 190px;
+  left: 350px;
+}
+.northern-europe{
+  width: 70px;
+  height: 50px;
+  top: 150px;
+  left: 470px;
+}
+.southern-europe{
+  width: 70px;
+  height: 50px;
+  top: 200px;
+  left: 470px;
+}
+.scandinavia{
+  width: 40px;
+  height: 100px;
+  top: 30px;
+  left: 500px;
+}
+.scandinavia span{
+  transform: rotate(90deg);
+}
+.western-russia{
+  width: 130px;
+  height: 200px;
+  top: 30px;
+  left: 540px;
+}
+
+/* Asia */
+.ural{
+  width: 60px;
+  height: 160px;
+  top: 15px;
+  left: 670px;
+}
+.syberia{
+  width: 80px;
+  height: 175px;
+  top: 0px;
+  left: 730px;
+}
+.yakutsk{
+  width: 80px;
+  height: 50px;
+  top: 15px;
+  left: 810px;
+}
+.irkutsk{
+  width: 80px;
+  height: 50px;
+  top: 65px;
+  left: 810px;
+}
+.mongolia{
+  width: 80px;
+  height: 60px;
+  top: 115px;
+  left: 810px;
+}
+.afganistan{
+  width: 60px;
+  height: 55px;
+  top: 175px;
+  left: 670px;
+}
+.afganistan span{
+  transform: rotate(45deg);
+  font-size: 0.7rem;
+}
+.kamchatka{
+  width: 70px;
+  height: 120px;
+  top: 15px;
+  left: 890px;
+}
+.china{
+  width: 130px;
+  height: 55px;
+  top: 175px;
+  left: 730px;
+}
+.japan{
+  width: 30px;
+  height: 60px;
+  top: 140px;
+  left: 895px;
+}
+.japan span{
+  transform: rotate(90deg);
+}
+.middle-east{
+  width: 150px;
+  height: 100px;
+  top: 230px;
+  left: 540px;
+}
+.india{
+  width: 70px;
+  height: 150px;
+  top: 230px;
+  left: 690px;
+}
+.siam{
+  width: 70px;
+  height: 80px;
+  top: 230px;
+  left: 760px;
+}
+
+/* Africa */
+.north-africa{
+  width: 120px;
+  height: 140px;
+  top: 280px;
+  left: 350px;
+}
+.egypt{
+  width: 70px;
+  height: 70px;
+  top: 280px;
+  left: 470px;
+}
+.east-africa{
+  width: 100px;
+  height: 160px;
+  top: 350px;
+  left: 470px;
+}
+.congo{
+  width: 60px;
+  height: 90px;
+  top: 420px;
+  left: 410px;
+}
+.south-africa{
+  width: 100px;
+  height: 150px;
+  top: 510px;
+  left: 450px;
+}
+.madagascar{
+  width: 30px;
+  height: 100px;
+  top: 520px;
+  left: 560px;
+}
+.madagascar span{
+  transform: rotate(90deg);
 }
