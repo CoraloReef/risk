@@ -29,9 +29,7 @@ class App extends React.Component {
         </header>
         <Container>
           <Row>
-            <Col className="polygon">
-              <Polygon />
-            </Col>
+            <Polygon />
           </Row>
         </Container>
       </div>
