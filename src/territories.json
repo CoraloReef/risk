@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "north-america",
-      "weight": "9",
+      "weight": "5",
       "data": [
         {
           "id": "1",
@@ -46,7 +46,7 @@
     {
       "id": "2",
       "name": "south-america",
-      "weight": "4",
+      "weight": "2",
       "data": [
         {
           "id": "10",
@@ -69,7 +69,7 @@
     {
       "id": "3",
       "name": "europe",
-      "weight": "7",
+      "weight": "5",
       "data": [
         {
           "id": "14",
@@ -104,7 +104,7 @@
     {
       "id": "4",
       "name": "asia",
-      "weight": "12",
+      "weight": "7",
       "data": [
         {
           "id": "21",
@@ -159,7 +159,7 @@
     {
       "id": "5",
       "name": "africa",
-      "weight": "6",
+      "weight": "3",
       "data": [
         {
           "id": "33",
@@ -190,7 +190,7 @@
     {
       "id": "6",
       "name": "australia",
-      "weight": "4",
+      "weight": "2",
       "data": [
         {
           "id": "39",
