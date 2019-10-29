@@ -54,6 +54,10 @@
       "new-guinea": "New Guinea",
       "western-australia": "Western Australia",
       "eastern-australia": "Eastern Australia"
+    },
+    "info": {
+      "phase": "Phase",
+      "Troop deployment": "Troop deployment"
     }
   },
   "ru": {
@@ -111,6 +115,10 @@
       "new-guinea": "Новая Гвинея",
       "western-australia": "Западная Австралия",
       "eastern-australia": "Восточная Австралия"
+    },
+    "info": {
+      "phase": "Фаза",
+      "Troop deployment": "Развертывание войск"
     }
   }
 }

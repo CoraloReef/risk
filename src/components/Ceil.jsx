@@ -2,6 +2,18 @@ import React from 'react';
 import cn from 'classnames';
 import { I18n } from 'react-redux-i18n';
 
+import connect from '../connect';
+
+const mapStateToProps = (state) => {
+  const {
+    gamePhase,
+  } = state;
+
+  return { gamePhase };
+};
+
+@connect(mapStateToProps)
+
 class Ceil extends React.Component {
   render() {
     const { contynentId, name } = this.props;

@@ -5,6 +5,7 @@ import { I18n } from 'react-redux-i18n';
 import connect from '../connect';
 import LanguagesSwitcher from './LanguagesSwitcher';
 import Polygon from './Polygon';
+import InfoPanel from './InfoPanel';
 
 const mapStateToProps = (state) => {
   const { locale } = state.i18n;
@@ -27,11 +28,18 @@ class App extends React.Component {
             </Row>
           </Container>
         </header>
-        <Container>
-          <Row>
-            <Polygon />
-          </Row>
-        </Container>
+        <section>
+          <Container className="mb-4">
+            <Row>
+              <Polygon />
+            </Row>
+          </Container>
+        </section>
+        <section>
+          <Container>
+            <InfoPanel />
+          </Container>
+        </section>
       </div>
     );
   }
