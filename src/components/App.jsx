@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header>
+        <header className="mb-4">
           <LanguagesSwitcher />
           <Container>
             <Row>

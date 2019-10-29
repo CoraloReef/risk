@@ -18,6 +18,8 @@
 
 .polygon{
   position: relative;
+  background-image: url('../static/img/ancient_map.png');
+  height: 800px;
 }
 
 .territory{
@@ -58,56 +60,56 @@
 .alaska{
   width: 60px;
   height: 70px;
-  top: 50px;
-  left: 0px;
+  top: 100px;
+  left: 60px;
 }
 .north-canada{
   width: 120px;
   height: 50px;
-  top: 50px;
-  left: 60px;
+  top: 100px;
+  left: 120px;
 }
 .alberta{
   width: 60px;
   height: 60px;
-  top: 100px;
-  left: 60px;
+  top: 150px;
+  left: 120px;
 }
 .ontario{
   width: 60px;
   height: 60px;
-  top: 100px;
-  left: 120px;
+  top: 150px;
+  left: 180px;
 }
 .quebec{
   width: 60px;
   height: 60px;
-  top: 100px;
-  left: 180px;
+  top: 150px;
+  left: 240px;
 }
 .greenland{
   width: 80px;
   height: 90px;
-  top: 0px;
-  left: 220px;
+  top: 50px;
+  left: 280px;
 }
 .western-us{
   width: 80px;
   height: 80px;
-  top: 160px;
-  left: 60px;
+  top: 210px;
+  left: 120px;
 }
 .eastern-us{
   width: 80px;
   height: 80px;
-  top: 160px;
-  left: 140px;
+  top: 210px;
+  left: 200px;
 }
 .central-america{
   width: 70px;
   height: 120px;
-  top: 240px;
-  left: 75px;
+  top: 290px;
+  left: 135px;
 }
 .central-america span{
   transform: rotate(90deg);
@@ -117,40 +119,40 @@
 .venezuela{
   width: 130px;
   height: 50px;
-  top: 360px;
-  left: 100px;
+  top: 410px;
+  left: 160px;
 }
 .peru{
   width: 50px;
   height: 130px;
-  top: 410px;
-  left: 80px;
+  top: 460px;
+  left: 140px;
 }
 .brazil{
   width: 130px;
   height: 130px;
-  top: 410px;
-  left: 130px;
+  top: 460px;
+  left: 190px;
 }
 .argentina{
   width: 90px;
   height: 130px;
-  top: 540px;
-  left: 100px;
+  top: 590px;
+  left: 160px;
 }
 
 /* Europe */
 .iceland{
   width: 70px;
   height: 40px;
-  top: 60px;
-  left: 380px;
+  top: 110px;
+  left: 440px;
 }
 .great-britain{
   width: 50px;
   height: 70px;
-  top: 110px;
-  left: 360px;
+  top: 160px;
+  left: 420px;
 }
 .great-britain span{
   transform: rotate(60deg);
@@ -159,26 +161,26 @@
 .western-europe{
   width: 120px;
   height: 50px;
-  top: 190px;
-  left: 350px;
+  top: 240px;
+  left: 410px;
 }
 .northern-europe{
   width: 70px;
   height: 50px;
-  top: 150px;
-  left: 470px;
+  top: 200px;
+  left: 530px;
 }
 .southern-europe{
   width: 70px;
   height: 50px;
-  top: 200px;
-  left: 470px;
+  top: 250px;
+  left: 530px;
 }
 .scandinavia{
   width: 40px;
   height: 100px;
-  top: 30px;
-  left: 500px;
+  top: 80px;
+  left: 560px;
 }
 .scandinavia span{
   transform: rotate(90deg);
@@ -186,46 +188,46 @@
 .western-russia{
   width: 130px;
   height: 200px;
-  top: 30px;
-  left: 540px;
+  top: 80px;
+  left: 600px;
 }
 
 /* Asia */
 .ural{
   width: 60px;
   height: 160px;
-  top: 15px;
-  left: 670px;
+  top: 65px;
+  left: 730px;
 }
 .syberia{
   width: 80px;
   height: 175px;
-  top: 0px;
-  left: 730px;
+  top: 50px;
+  left: 790px;
 }
 .yakutsk{
   width: 80px;
   height: 50px;
-  top: 15px;
-  left: 810px;
+  top: 65px;
+  left: 870px;
 }
 .irkutsk{
   width: 80px;
   height: 50px;
-  top: 65px;
-  left: 810px;
+  top: 115px;
+  left: 870px;
 }
 .mongolia{
   width: 80px;
   height: 60px;
-  top: 115px;
-  left: 810px;
+  top: 165px;
+  left: 870px;
 }
 .afganistan{
   width: 60px;
   height: 55px;
-  top: 175px;
-  left: 670px;
+  top: 225px;
+  left: 730px;
 }
 .afganistan span{
   transform: rotate(45deg);
@@ -234,20 +236,20 @@
 .kamchatka{
   width: 70px;
   height: 120px;
-  top: 15px;
-  left: 890px;
+  top: 65px;
+  left: 950px;
 }
 .china{
   width: 130px;
   height: 55px;
-  top: 175px;
-  left: 730px;
+  top: 225px;
+  left: 790px;
 }
 .japan{
   width: 30px;
   height: 60px;
-  top: 140px;
-  left: 895px;
+  top: 190px;
+  left: 955px;
 }
 .japan span{
   transform: rotate(90deg);
@@ -255,58 +257,58 @@
 .middle-east{
   width: 150px;
   height: 100px;
-  top: 230px;
-  left: 540px;
+  top: 280px;
+  left: 600px;
 }
 .india{
   width: 70px;
   height: 150px;
-  top: 230px;
-  left: 690px;
+  top: 280px;
+  left: 750px;
 }
 .siam{
   width: 70px;
   height: 80px;
-  top: 230px;
-  left: 760px;
+  top: 280px;
+  left: 820px;
 }
 
 /* Africa */
 .north-africa{
   width: 120px;
   height: 140px;
-  top: 280px;
-  left: 350px;
+  top: 330px;
+  left: 410px;
 }
 .egypt{
   width: 70px;
   height: 70px;
-  top: 280px;
-  left: 470px;
+  top: 330px;
+  left: 530px;
 }
 .east-africa{
   width: 100px;
   height: 160px;
-  top: 350px;
-  left: 470px;
+  top: 400px;
+  left: 530px;
 }
 .congo{
   width: 60px;
   height: 90px;
-  top: 420px;
-  left: 410px;
+  top: 470px;
+  left: 470px;
 }
 .south-africa{
   width: 100px;
   height: 150px;
-  top: 510px;
-  left: 450px;
+  top: 560px;
+  left: 510px;
 }
 .madagascar{
   width: 30px;
   height: 100px;
-  top: 520px;
-  left: 560px;
+  top: 570px;
+  left: 620px;
 }
 .madagascar span{
   transform: rotate(90deg);
@@ -316,26 +318,26 @@
 .indonesia{
   width: 100px;
   height: 40px;
-  top: 350px;
-  left: 790px;
+  top: 400px;
+  left: 850px;
 }
 .new-guinea{
   width: 80px;
   height: 50px;
-  top: 320px;
-  left: 900px;
+  top: 370px;
+  left: 960px;
 }
 .western-australia{
   width: 90px;
   height: 120px;
-  top: 410px;
-  left: 820px;
+  top: 460px;
+  left: 880px;
 }
 .eastern-australia{
   width: 90px;
   height: 160px;
-  top: 390px;
-  left: 910px;
+  top: 440px;
+  left: 970px;
 }
 
 /* Lines */
@@ -347,151 +349,157 @@
 
 .line.greenland-1{
   width: 40px;
-  top: 50px;
-  left: 180px;
+  top: 100px;
+  left: 240px;
   transform: rotate(0deg);
 }
 .line.greenland-2{
   width: 63px;
-  top: 75px;
-  left: 169px;
+  top: 125px;
+  left: 229px;
   transform: rotate(-50deg);
 }
 .line.greenland-3{
   width: 11px;
-  top: 94px;
-  left: 226px;
+  top: 144px;
+  left: 286px;
   transform: rotate(90deg);
 }
 .line.greenland-4{
   width: 100px;
-  top: 55px;
-  left: 290px;
+  top: 105px;
+  left: 350px;
   transform: rotate(37deg);
 }
 .line.iceland-1{
   width: 55px;
-  top: 119px;
-  left: 402px;
+  top: 169px;
+  left: 462px;
   transform: rotate(134deg);
 }
 .line.iceland-2{
   width: 60px;
-  top: 112px;
-  left: 444px;
+  top: 162px;
+  left: 504px;
   transform: rotate(25deg);
 }
 .line.great-britain-1{
   width: 92px;
-  top: 133px;
-  left: 409px;
+  top: 183px;
+  left: 469px;
   transform: rotate(-10deg);
 }
 .line.great-britain-2{
   width: 65px;
-  top: 153px;
-  left: 407px;
+  top: 203px;
+  left: 467px;
   transform: rotate(21deg);
 }
 .line.great-britain-3{
   width: 11px;
-  top: 184px;
-  left: 379px;
+  top: 234px;
+  left: 439px;
   transform: rotate(90deg);
 }
 .line.scandinavia-1{
   width: 21px;
-  top: 139px;
-  left: 500px;
+  top: 189px;
+  left: 560px;
   transform: rotate(90deg);
 }
 .line.brazil-1{
   width: 100px;
-  top: 420px;
-  left: 255px;
+  top: 470px;
+  left: 315px;
   transform: rotate(155deg);
 }
 .line.north-africa-1{
   width: 41px;
-  top: 260px;
-  left: 364px;
+  top: 310px;
+  left: 424px;
   transform: rotate(90deg);
 }
 .line.north-africa-2{
   width: 38px;
-  top: 265px;
-  left: 444px;
+  top: 315px;
+  left: 504px;
   transform: rotate(125deg);
 }
 .line.egypt-1{
   width: 31px;
-  top: 264px;
-  left: 490px;
+  top: 314px;
+  left: 550px;
   transform: rotate(90deg);
 }
 .line.east-africa-1{
   width: 26px;
-  top: 340px;
-  left: 564px;
+  top: 390px;
+  left: 624px;
   transform: rotate(125deg);
 }
 .line.madagascar-1{
   width: 11px;
-  top: 514px;
-  left: 559px;
+  top: 564px;
+  left: 619px;
   transform: rotate(90deg);
 }
 .line.madagascar-2{
   width: 11px;
-  top: 570px;
-  left: 550px;
+  top: 620px;
+  left: 610px;
   transform: rotate(0deg);
 }
 .line.japan-1{
   width: 6px;
-  top: 137px;
-  left: 906px;
+  top: 187px;
+  left: 966px;
   transform: rotate(90deg);
 }
 .line.japan-2{
   width: 6px;
-  top: 157px;
-  left: 890px;
+  top: 207px;
+  left: 950px;
   transform: rotate(0deg);
 }
 .line.kamchatka-1{
-  width: 80px;
-  top: 65px;
-  left: 959px;
+  width: 120px;
+  top: 115px;
+  left: 1019px;
+  transform: rotate(0deg);
+}
+.line.alaska-1{
+  width: 60px;
+  top: 115px;
+  left: 0px;
   transform: rotate(0deg);
 }
 .line.siam-1{
   width: 41px;
-  top: 329px;
-  left: 789px;
+  top: 379px;
+  left: 849px;
   transform: rotate(90deg);
 }
 .line.indonesia-1{
   width: 11px;
-  top: 359px;
-  left: 889px;
+  top: 409px;
+  left: 950px;
   transform: rotate(0deg);
 }
 .line.indonesia-2{
   width: 21px;
-  top: 400px;
-  left: 875px;
+  top: 450px;
+  left: 935px;
   transform: rotate(90deg);
 }
 .line.new-guinea-1{
   width: 51px;
-  top: 390px;
-  left: 874px;
+  top: 440px;
+  left: 934px;
   transform: rotate(125deg);
 }
 .line.new-guinea-2{
   width: 21px;
-  top: 379px;
-  left: 930px;
+  top: 429px;
+  left: 990px;
   transform: rotate(90deg);
 }

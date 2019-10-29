@@ -23,6 +23,22 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: './dist/static/img/[hash].[ext]',
+          },
+        }],
+        include: [
+          path.resolve(__dirname, './static/img/'),
+        ],
+      },
+      {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000',
+      },
     ],
   },
   plugins: [

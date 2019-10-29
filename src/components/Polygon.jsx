@@ -72,6 +72,7 @@ class Polygon extends React.Component {
         <div className="line japan-1" />
         <div className="line japan-2" />
         <div className="line kamchatka-1" />
+        <div className="line alaska-1" />
         <div className="line siam-1" />
         <div className="line indonesia-1" />
         <div className="line indonesia-2" />
