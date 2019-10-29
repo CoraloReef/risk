@@ -23,7 +23,7 @@
 }
 
 .territory{
-  border: 1px solid #636b6f;
+  border: 1px solid #a5a5a5;
   text-align: center;
   font-size: 0.8rem;
 
@@ -34,7 +34,7 @@
   position: absolute;
 }
 .ter-name{
-  color: #636b6f;
+  color: #313131;
 }
 
 .contynent-1{
