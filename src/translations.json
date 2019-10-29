@@ -57,7 +57,19 @@
     },
     "info": {
       "phase": "Phase",
-      "Troop deployment": "Troop deployment"
+      "round": "Game Round"
+    },
+    "phases": {
+      "territory allocation": "Territory Allocation",
+      "troop deployment": "Troop Deployment",
+      "reinforcement": "Reinforcement",
+      "battle orders": "Battle Orders",
+      "battle resolution": "Battle Resolution",
+      "border clash": "Border Clash",
+      "mass invasions": "Mass Invasions",
+      "invasions": "Invasions",
+      "spoils of war": "Spoils of War",
+      "tactical move": "Tactical Move"
     }
   },
   "ru": {
@@ -118,7 +130,19 @@
     },
     "info": {
       "phase": "Фаза",
-      "Troop deployment": "Развертывание войск"
+      "round": "Раунд игры"
+    },
+    "phases": {
+      "territory allocation": "Распределение территорий",
+      "troop deployment": "Развертывание войск",
+      "reinforcement": "Подкрепление",
+      "battle orders": "Боевые приказы",
+      "battle resolution": "Атака",
+      "border clash": "Пограничный конфликт",
+      "mass invasions": "Массовое вторжение",
+      "invasions": "Вторжение",
+      "spoils of war": "Военная добыча",
+      "tactical move": "Тактическое передвижение"
     }
   }
 }

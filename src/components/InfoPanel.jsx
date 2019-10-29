@@ -26,7 +26,7 @@ class InfoPanel extends React.Component {
             {I18n.t('info.phase')}
             :
             {' '}
-            {I18n.t(`info.${gamePhase}`)}
+            {I18n.t(`phases.${gamePhase}`)}
           </p>
         </Col>
       </Row>

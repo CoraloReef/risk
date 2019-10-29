@@ -27,7 +27,7 @@ const gamePhase = handleActions({
   [actions.setGamePhase](state, { payload: { phase } }) {
     return phase;
   },
-}, 'Troop deployment');
+}, 'territory allocation');
 
 export default combineReducers({
   continents,
