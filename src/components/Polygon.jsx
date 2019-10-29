@@ -29,6 +29,7 @@ class Polygon extends React.Component {
         const territoryData = {
           id: territory.id,
           name: territory.name,
+          contacts: territory.contacts,
           idContinent: continent.id,
         };
 

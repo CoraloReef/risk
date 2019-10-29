@@ -7,39 +7,48 @@
       "data": [
         {
           "id": "1",
-          "name": "alaska"
+          "name": "alaska",
+          "contacts": ["2", "4", "24"]
         },
         {
           "id": "2",
-          "name": "north-canada"
+          "name": "north-canada",
+          "contacts": ["1", "3", "4", "5", "6"]
         },
         {
           "id": "3",
-          "name": "greenland"
+          "name": "greenland",
+          "contacts": ["2", "5", "6", "14"]
         },
         {
           "id": "4",
-          "name": "alberta"
+          "name": "alberta",
+          "contacts": ["1", "2", "5", "7"]
         },
         {
           "id": "5",
-          "name": "ontario"
+          "name": "ontario",
+          "contacts": ["2", "3", "4", "6", "7", "8"]
         },
         {
           "id": "6",
-          "name": "quebec"
+          "name": "quebec",
+          "contacts": ["2", "3", "5", "8"]
         },
         {
           "id": "7",
-          "name": "western-us"
+          "name": "western-us",
+          "contacts": ["4", "5", "6", "8", "9"]
         },
         {
           "id": "8",
-          "name": "eastern-us"
+          "name": "eastern-us",
+          "contacts": ["5", "6", "7", "9"]
         },
         {
           "id": "9",
-          "name": "central-america"
+          "name": "central-america",
+          "contacts": ["7", "8", "10"]
         }
       ]
     },
@@ -50,19 +59,23 @@
       "data": [
         {
           "id": "10",
-          "name": "venezuela"
+          "name": "venezuela",
+          "contacts": ["9", "11", "12"]
         },
         {
           "id": "11",
-          "name": "peru"
+          "name": "peru",
+          "contacts": ["10", "12", "13"]
         },
         {
           "id": "12",
-          "name": "brazil"
+          "name": "brazil",
+          "contacts": ["10", "11", "13", "33"]
         },
         {
           "id": "13",
-          "name": "argentina"
+          "name": "argentina",
+          "contacts": ["11", "12"]
         }
       ]
     },
@@ -73,31 +86,38 @@
       "data": [
         {
           "id": "14",
-          "name": "iceland"
+          "name": "iceland",
+          "contacts": ["3", "15", "16"]
         },
         {
           "id": "15",
-          "name": "scandinavia"
+          "name": "scandinavia",
+          "contacts": ["14", "16", "17", "18"]
         },
         {
           "id": "16",
-          "name": "great-britain"
+          "name": "great-britain",
+          "contacts": ["14", "15", "17", "19"]
         },
         {
           "id": "17",
-          "name": "northern-europe"
+          "name": "northern-europe",
+          "contacts": ["15", "16", "18", "19", "20"]
         },
         {
           "id": "18",
-          "name": "western-russia"
+          "name": "western-russia",
+          "contacts": ["15", "17", "20", "21", "26", "30"]
         },
         {
           "id": "19",
-          "name": "western-europe"
+          "name": "western-europe",
+          "contacts": ["16", "17", "20", "33"]
         },
         {
           "id": "20",
-          "name": "southern-europe"
+          "name": "southern-europe",
+          "contacts": ["17", "18", "19", "30", "33", "34"]
         }
       ]
     },
@@ -108,51 +128,63 @@
       "data": [
         {
           "id": "21",
-          "name": "ural"
+          "name": "ural",
+          "contacts": ["18", "22", "26", "27"]
         },
         {
           "id": "22",
-          "name": "syberia"
+          "name": "syberia",
+          "contacts": ["21", "23", "25", "26", "27", "28"]
         },
         {
           "id": "23",
-          "name": "yakutsk"
+          "name": "yakutsk",
+          "contacts": ["22", "24", "25"]
         },
         {
           "id": "24",
-          "name": "kamchatka"
+          "name": "kamchatka",
+          "contacts": ["23", "25", "28", "29", "1"]
         },
         {
           "id": "25",
-          "name": "irkutsk"
+          "name": "irkutsk",
+          "contacts": ["22", "23", "24", "28"]
         },
         {
           "id": "26",
-          "name": "afganistan"
+          "name": "afganistan",
+          "contacts": ["18", "21", "22", "27", "30", "31"]
         },
         {
           "id": "27",
-          "name": "china"
+          "name": "china",
+          "contacts": ["21", "22", "26", "28", "31", "32"]
         },
         {
           "id": "28",
-          "name": "mongolia"
+          "name": "mongolia",
+          "contacts": ["22", "24", "25", "27", "29"]
         },
         {
           "id": "29",
-          "name": "japan"
+          "name": "japan",
+          "contacts": ["24", "28"]
         },
         {
           "id": "30",
-          "name": "middle-east"
+          "name": "middle-east",
+          "contacts": ["18", "20", "26", "31", "34"]
         },
         {
           "id": "31",
-          "name": "india"
+          "name": "india",
+          "contacts": ["26", "27", "30", "32"]
         },
         {
           "id": "32",
-          "name": "siam"
+          "name": "siam",
+          "contacts": ["27", "31", "39"]
         }
       ]
     },
@@ -163,27 +195,33 @@
       "data": [
         {
           "id": "33",
-          "name": "north-africa"
+          "name": "north-africa",
+          "contacts": ["12", "19", "20", "34", "35", "36"]
         },
         {
           "id": "34",
-          "name": "egypt"
+          "name": "egypt",
+          "contacts": ["20", "30", "33", "36"]
         },
         {
           "id": "35",
-          "name": "congo"
+          "name": "congo",
+          "contacts": ["33", "36", "37"]
         },
         {
           "id": "36",
-          "name": "east-africa"
+          "name": "east-africa",
+          "contacts": ["30", "33", "34", "35", "37", "38"]
         },
         {
           "id": "37",
-          "name": "south-africa"
+          "name": "south-africa",
+          "contacts": ["35", "36", "38"]
         },
         {
           "id": "38",
-          "name": "madagascar"
+          "name": "madagascar",
+          "contacts": ["36", "37"]
         }
       ]
     },
@@ -194,19 +232,23 @@
       "data": [
         {
           "id": "39",
-          "name": "indonesia"
+          "name": "indonesia",
+          "contacts": ["32", "40", "41"]
         },
         {
           "id": "40",
-          "name": "new-guinea"
+          "name": "new-guinea",
+          "contacts": ["39", "41", "42"]
         },
         {
           "id": "41",
-          "name": "western-australia"
+          "name": "western-australia",
+          "contacts": ["39", "40", "42"]
         },
         {
           "id": "42",
-          "name": "eastern-australia"
+          "name": "eastern-australia",
+          "contacts": ["40", "41"]
         }
       ]
     }
