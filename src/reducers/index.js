@@ -23,8 +23,15 @@ const territories = handleActions({
   },
 }, { byId: {}, allIds: [] });
 
+const gamePhase = handleActions({
+  [actions.setGamePhase](state, { payload: { phase } }) {
+    return phase;
+  },
+}, 'Troop deployment');
+
 export default combineReducers({
   continents,
   territories,
+  gamePhase,
   i18n: i18nReducer,
 });
