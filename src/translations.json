@@ -60,6 +60,7 @@
       "round": "Game Round"
     },
     "phases": {
+      "start": "Start Game",
       "territory allocation": "Territory Allocation",
       "troop deployment": "Troop Deployment",
       "reinforcement": "Reinforcement",
@@ -70,6 +71,14 @@
       "invasions": "Invasions",
       "spoils of war": "Spoils of War",
       "tactical move": "Tactical Move"
+    },
+    "forms": {
+      "start-field-player": "Player name",
+      "start-btn-submit": "Ok",
+      "start-btn-submit-processing": "Submiting...",
+      "human": "Human",
+      "ai": "ai",
+      "disabled": "Disabled"
     }
   },
   "ru": {
@@ -133,6 +142,7 @@
       "round": "Раунд игры"
     },
     "phases": {
+      "start": "Начало игры",
       "territory allocation": "Распределение территорий",
       "troop deployment": "Развертывание войск",
       "reinforcement": "Подкрепление",
@@ -143,6 +153,14 @@
       "invasions": "Вторжение",
       "spoils of war": "Военная добыча",
       "tactical move": "Тактическое передвижение"
+    },
+    "forms": {
+      "start-field-player": "Имя игрока",
+      "start-btn-submit": "Подтвердить",
+      "start-btn-submit-processing": "Подтверждение...",
+      "human": "Человек",
+      "ai": "ИИ",
+      "disabled": "Выключить"
     }
   }
 }

@@ -7,9 +7,10 @@ import connect from '../connect';
 const mapStateToProps = (state) => {
   const {
     gamePhase,
+    i18n: { locale },
   } = state;
 
-  return { gamePhase };
+  return { gamePhase, locale };
 };
 
 @connect(mapStateToProps)

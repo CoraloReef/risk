@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 import connect from '../connect';
 import territoriesObj from '../territories.json';
@@ -44,42 +44,44 @@ class Polygon extends React.Component {
     const { territories } = this.props;
 
     return (
-      <Col className="polygon">
-        {territories.map((territory) => (
-          <Ceil
-            id={territory.id}
-            name={territory.name}
-            contynentId={territory.idContinent}
-            key={territory.id}
-          />
-        ))}
-        <div className="line greenland-1" />
-        <div className="line greenland-2" />
-        <div className="line greenland-3" />
-        <div className="line greenland-4" />
-        <div className="line iceland-1" />
-        <div className="line iceland-2" />
-        <div className="line great-britain-1" />
-        <div className="line great-britain-2" />
-        <div className="line great-britain-3" />
-        <div className="line scandinavia-1" />
-        <div className="line brazil-1" />
-        <div className="line north-africa-1" />
-        <div className="line north-africa-2" />
-        <div className="line egypt-1" />
-        <div className="line east-africa-1" />
-        <div className="line madagascar-1" />
-        <div className="line madagascar-2" />
-        <div className="line japan-1" />
-        <div className="line japan-2" />
-        <div className="line kamchatka-1" />
-        <div className="line alaska-1" />
-        <div className="line siam-1" />
-        <div className="line indonesia-1" />
-        <div className="line indonesia-2" />
-        <div className="line new-guinea-1" />
-        <div className="line new-guinea-2" />
-      </Col>
+      <Row>
+        <Col className="polygon">
+          {territories.map((territory) => (
+            <Ceil
+              id={territory.id}
+              name={territory.name}
+              contynentId={territory.idContinent}
+              key={territory.id}
+            />
+          ))}
+          <div className="line greenland-1" />
+          <div className="line greenland-2" />
+          <div className="line greenland-3" />
+          <div className="line greenland-4" />
+          <div className="line iceland-1" />
+          <div className="line iceland-2" />
+          <div className="line great-britain-1" />
+          <div className="line great-britain-2" />
+          <div className="line great-britain-3" />
+          <div className="line scandinavia-1" />
+          <div className="line brazil-1" />
+          <div className="line north-africa-1" />
+          <div className="line north-africa-2" />
+          <div className="line egypt-1" />
+          <div className="line east-africa-1" />
+          <div className="line madagascar-1" />
+          <div className="line madagascar-2" />
+          <div className="line japan-1" />
+          <div className="line japan-2" />
+          <div className="line kamchatka-1" />
+          <div className="line alaska-1" />
+          <div className="line siam-1" />
+          <div className="line indonesia-1" />
+          <div className="line indonesia-2" />
+          <div className="line new-guinea-1" />
+          <div className="line new-guinea-2" />
+        </Col>
+      </Row>
     );
   }
 }

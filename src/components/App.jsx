@@ -1,46 +1,39 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { I18n } from 'react-redux-i18n';
+import { Container } from 'react-bootstrap';
 
 import connect from '../connect';
-import LanguagesSwitcher from './LanguagesSwitcher';
+import Header from './Header';
+import StartSettings from './StartSettings';
 import Polygon from './Polygon';
 import InfoPanel from './InfoPanel';
 
 const mapStateToProps = (state) => {
-  const { locale } = state.i18n;
-  return { locale };
+  const { gamePhase } = state;
+  return { gamePhase };
 };
 
 @connect(mapStateToProps)
 
 class App extends React.Component {
   render() {
+    const { gamePhase } = this.props;
+
     return (
-      <div>
-        <header className="mb-4">
-          <LanguagesSwitcher />
-          <Container>
-            <Row>
-              <Col>
-                <h1 className="heading">{I18n.t('app.heading')}</h1>
-              </Col>
-            </Row>
-          </Container>
-        </header>
+      <>
+        <Header />
         <section>
           <Container className="mb-4">
-            <Row>
-              <Polygon />
-            </Row>
+            {(gamePhase === 'start')
+              ? <StartSettings />
+              : (
+                <>
+                  <Polygon />
+                  <InfoPanel />
+                </>
+              )}
           </Container>
         </section>
-        <section>
-          <Container>
-            <InfoPanel />
-          </Container>
-        </section>
-      </div>
+      </>
     );
   }
 }

@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
+import { reducer as formReducer } from 'redux-form';
 import { i18nReducer } from 'react-redux-i18n';
 import * as actions from '../actions';
 
@@ -23,15 +24,34 @@ const territories = handleActions({
   },
 }, { byId: {}, allIds: [] });
 
+const players = handleActions({
+  [actions.addPlayer](state, { payload: player }) {
+    const { byId, allIds } = state;
+    return {
+      byId: { ...byId, [player.id]: player },
+      allIds: [...allIds, player.id],
+    };
+  },
+}, { byId: {}, allIds: [] });
+
+const currentPlayerId = handleActions({
+  [actions.setCurrentPlayer](state, { payload: { id } }) {
+    return id;
+  },
+}, '1');
+
 const gamePhase = handleActions({
   [actions.setGamePhase](state, { payload: { phase } }) {
     return phase;
   },
-}, 'territory allocation');
+}, 'start');
 
 export default combineReducers({
   continents,
   territories,
+  players,
+  currentPlayerId,
   gamePhase,
   i18n: i18nReducer,
+  form: formReducer,
 });
