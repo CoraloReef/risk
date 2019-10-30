@@ -33,50 +33,67 @@ class StartSettings extends React.Component {
     }
   };
 
+  generateRows = () => {
+    const rowOptions = [
+      { id: 1, color: 'red' },
+      { id: 2, color: 'blue' },
+      { id: 3, color: 'yellow' },
+      { id: 4, color: 'green' },
+      { id: 5, color: 'purple' },
+      { id: 6, color: 'orange' },
+    ];
+
+    const { submitting } = this.props;
+
+    return rowOptions.map((el) => (
+      <Row key={el.color}>
+        <Col xs={1}>
+          <div className={`player-color ${el.color}`} />
+        </Col>
+        <Col xs={8}>
+          <div className="form-group mb-3">
+            <Field
+              name={`player${el.id}Name`}
+              component="input"
+              type="text"
+              placeholder={I18n.t('forms.start-field-player')}
+              className="form-control form-control-lg"
+              disabled={submitting}
+              required
+            />
+          </div>
+        </Col>
+        <Col xs={3}>
+          <div className="form-check form-check-inline">
+            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+            <span className="form-check-label">{I18n.t('forms.human')}</span>
+          </div>
+          <div className="form-check form-check-inline">
+            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+            <span className="form-check-label">{I18n.t('forms.ai')}</span>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+            <span className="form-check-label">
+              {I18n.t('forms.disabled')}
+            </span>
+          </div>
+        </Col>
+      </Row>
+    ));
+  }
+
   render() {
     const { handleSubmit, submitting } = this.props;
 
     return (
       <Row className="justify-content-md-center">
-        <Col sm={8}>
+        <Col sm={9}>
           <h2 className="mb-4">{I18n.t('phases.start')}</h2>
 
           <form onSubmit={handleSubmit(this.handleSubmitStartSettings)}>
 
-            <Row>
-              <Col xs={1}>
-                <div className="player-color red" />
-              </Col>
-              <Col xs={7}>
-                <div className="form-group mb-3">
-                  <Field
-                    name="player1Name"
-                    component="input"
-                    type="text"
-                    placeholder={I18n.t('forms.start-field-player')}
-                    className="form-control form-control-lg"
-                    disabled={submitting}
-                    required
-                  />
-                </div>
-              </Col>
-              <Col xs={4}>
-                <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                  <span className="form-check-label">{I18n.t('forms.human')}</span>
-                </div>
-                <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                  <span className="form-check-label">{I18n.t('forms.ai')}</span>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                  <span className="form-check-label">
-                    {I18n.t('forms.disabled')}
-                  </span>
-                </div>
-              </Col>
-            </Row>
+            {this.generateRows()}
 
             <div className="text-center">
               <button className="btn btn-primary" type="submit">

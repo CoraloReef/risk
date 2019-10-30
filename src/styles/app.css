@@ -16,6 +16,10 @@
   text-decoration: underline;
 }
 
+.player-color{
+  height: 3rem;
+}
+
 .player-color.red{
   background-color: #ff0000;
 }
