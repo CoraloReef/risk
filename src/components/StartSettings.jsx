@@ -17,17 +17,13 @@ export default @reduxForm({ form: 'newChannel' })
 @connect(mapStateToProps)
 
 class StartSettings extends React.Component {
-  handleSubmitStartSettings = async (values) => {
-    const { reset, postChannel } = this.props;
-    const { channelName } = values;
-    const channelData = {
-      name: channelName,
-      removable: true,
-    };
+  handleSubmitStartSettings = (values) => {
+    const { setGamePhase } = this.props;
+    const phase = 'territory allocation';
+    console.log(values);
 
     try {
-      await postChannel(channelData);
-      reset();
+      setGamePhase({ phase });
     } catch (err) {
       throw new SubmissionError({ _error: err.message });
     }
@@ -51,7 +47,7 @@ class StartSettings extends React.Component {
           <div className={`player-color ${el.color}`} />
         </Col>
         <Col xs={8}>
-          <div className="form-group mb-3">
+          <div className="form-group">
             <Field
               name={`player${el.id}Name`}
               component="input"
@@ -64,19 +60,16 @@ class StartSettings extends React.Component {
           </div>
         </Col>
         <Col xs={3}>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-            <span className="form-check-label">{I18n.t('forms.human')}</span>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-            <span className="form-check-label">{I18n.t('forms.ai')}</span>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <span className="form-check-label">
-              {I18n.t('forms.disabled')}
-            </span>
+          <div className="form-group">
+            <Field
+              name={`player${el.id}Type`}
+              component="select"
+              className="form-control form-control-lg"
+            >
+              <option value="human">{I18n.t('forms.human')}</option>
+              <option value="ai">{I18n.t('forms.ai')}</option>
+              <option value="disabled">{I18n.t('forms.disabled')}</option>
+            </Field>
           </div>
         </Col>
       </Row>
