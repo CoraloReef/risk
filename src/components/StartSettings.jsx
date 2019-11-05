@@ -20,7 +20,6 @@ class StartSettings extends React.Component {
   handleSubmitStartSettings = (values) => {
     const { setGamePhase } = this.props;
     const phase = 'territory allocation';
-    console.log(values);
 
     try {
       setGamePhase({ phase });
