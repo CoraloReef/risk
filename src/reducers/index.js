@@ -38,7 +38,7 @@ const currentPlayerId = handleActions({
   [actions.setCurrentPlayer](state, { payload: { id } }) {
     return id;
   },
-}, '1');
+}, '0');
 
 const gamePhase = handleActions({
   [actions.setGamePhase](state, { payload: { phase } }) {

@@ -1,9 +1,22 @@
 import React from 'react';
+import faker from 'faker';
 import { Field, reduxForm, SubmissionError } from 'redux-form';
 import { I18n } from 'react-redux-i18n';
 import { Row, Col } from 'react-bootstrap';
 
 import connect from '../connect';
+
+const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange'];
+const playersCount = 6;
+
+const rowOptions = colors.map((c, i) => {
+  const option = {
+    id: i,
+    color: c,
+    name: faker.name.findName(),
+  };
+  return option;
+});
 
 const mapStateToProps = (state) => {
   const {
@@ -13,15 +26,27 @@ const mapStateToProps = (state) => {
   return { locale };
 };
 
-export default @reduxForm({ form: 'newChannel' })
+export default @reduxForm({ form: 'players' })
 @connect(mapStateToProps)
 
 class StartSettings extends React.Component {
   handleSubmitStartSettings = (values) => {
-    const { setGamePhase } = this.props;
+    const { addPlayer, setGamePhase } = this.props;
     const phase = 'territory allocation';
 
     try {
+      for (let i = 0, id = 0; i < playersCount; i += 1) {
+        if (values[`player${i}Type`] !== 'disabled') {
+          addPlayer({
+            id,
+            color: rowOptions[i].color,
+            name: (values[`player${i}Name`] === undefined) ? rowOptions[i].name : values[`player${i}Name`],
+            type: (values[`player${i}Type`] === undefined) ? 'human' : values[`player${i}Type`],
+          });
+          id += 1;
+        }
+      }
+
       setGamePhase({ phase });
     } catch (err) {
       throw new SubmissionError({ _error: err.message });
@@ -29,15 +54,6 @@ class StartSettings extends React.Component {
   };
 
   generateRows = () => {
-    const rowOptions = [
-      { id: 1, color: 'red' },
-      { id: 2, color: 'blue' },
-      { id: 3, color: 'yellow' },
-      { id: 4, color: 'green' },
-      { id: 5, color: 'purple' },
-      { id: 6, color: 'orange' },
-    ];
-
     const { submitting } = this.props;
 
     return rowOptions.map((el) => (
@@ -51,10 +67,9 @@ class StartSettings extends React.Component {
               name={`player${el.id}Name`}
               component="input"
               type="text"
-              placeholder={I18n.t('forms.start-field-player')}
+              placeholder={el.name}
               className="form-control form-control-lg"
               disabled={submitting}
-              required
             />
           </div>
         </Col>
@@ -65,7 +80,7 @@ class StartSettings extends React.Component {
               component="select"
               className="form-control form-control-lg"
             >
-              <option value="human">{I18n.t('forms.human')}</option>
+              <option value="human" checked>{I18n.t('forms.human')}</option>
               <option value="ai">{I18n.t('forms.ai')}</option>
               <option value="disabled">{I18n.t('forms.disabled')}</option>
             </Field>

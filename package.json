@@ -48,6 +48,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "faker": "^4.1.0",
     "i18next": "^17.3.0",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
