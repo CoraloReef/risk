@@ -23,6 +23,7 @@ class Polygon extends React.Component {
         id: continent.id,
         name: continent.name,
         weight: continent.weight,
+        owner: null,
       };
 
       continent.data.forEach((territory) => {
@@ -31,6 +32,8 @@ class Polygon extends React.Component {
           name: territory.name,
           contacts: territory.contacts,
           idContinent: continent.id,
+          owner: null,
+          armysCount: null,
         };
 
         addTerritory(territoryData);

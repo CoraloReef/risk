@@ -15,6 +15,7 @@ const rowOptions = colors.map((c, i) => {
     color: c,
     name: faker.name.findName(),
   };
+
   return option;
 });
 
@@ -43,6 +44,7 @@ class StartSettings extends React.Component {
             name: (values[`player${i}Name`] === undefined) ? rowOptions[i].name : values[`player${i}Name`],
             type: (values[`player${i}Type`] === undefined) ? 'human' : values[`player${i}Type`],
           });
+
           id += 1;
         }
       }
