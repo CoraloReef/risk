@@ -57,7 +57,8 @@
     },
     "info": {
       "phase": "Phase",
-      "round": "Game Round"
+      "round": "Game Round",
+      "current-player": "Player"
     },
     "phases": {
       "start": "Start Game",
@@ -139,7 +140,8 @@
     },
     "info": {
       "phase": "Фаза",
-      "round": "Раунд игры"
+      "round": "Раунд игры",
+      "current-player": "Игрок"
     },
     "phases": {
       "start": "Начало игры",

@@ -8,16 +8,19 @@ const mapStateToProps = (state) => {
   const {
     gamePhase,
     i18n: { locale },
+    currentPlayerId,
+    players: { byId, allIds },
   } = state;
+  const players = allIds.map((id) => byId[id]);
 
-  return { gamePhase, locale };
+  return { gamePhase, locale, currentPlayerId, players };
 };
 
 @connect(mapStateToProps)
 
 class InfoPanel extends React.Component {
   render() {
-    const { gamePhase } = this.props;
+    const { gamePhase, currentPlayerId, players } = this.props;
 
     return (
       <Row>
@@ -27,6 +30,14 @@ class InfoPanel extends React.Component {
             :
             {' '}
             {I18n.t(`phases.${gamePhase}`)}
+          </p>
+        </Col>
+        <Col>
+          <p>
+            {I18n.t('info.current-player')}
+            :
+            {' '}
+            {players[currentPlayerId].name}
           </p>
         </Col>
       </Row>
