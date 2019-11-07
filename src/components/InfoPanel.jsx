@@ -32,6 +32,9 @@ class InfoPanel extends React.Component {
             {I18n.t(`phases.${gamePhase}`)}
           </p>
         </Col>
+        <Col xs={1}>
+          <div className={`player-color ${players[currentPlayerId].color}`} />
+        </Col>
         <Col>
           <p>
             {I18n.t('info.current-player')}

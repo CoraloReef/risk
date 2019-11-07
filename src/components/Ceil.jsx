@@ -20,7 +20,11 @@ const mapStateToProps = (state) => {
 @connect(mapStateToProps)
 
 class Ceil extends React.Component {
-  handleClick = (id) => () => {
+  handleClick = (id, owner) => () => {
+    if (owner) {
+      return null;
+    }
+
     const { currentPlayerId, players, setTerritoryOwner, setCurrentPlayer } = this.props;
     setTerritoryOwner({ id, owner: currentPlayerId });
 
@@ -38,12 +42,12 @@ class Ceil extends React.Component {
       territory: true,
       [name]: true,
       [`contynent-${contynentId}`]: true,
-      pointer: true,
+      pointer: !owner,
       [players[owner] ? `bg-${players[owner].color}` : '']: players[owner],
     });
 
     return (
-      <div className={terClass} onClick={this.handleClick(id)}>
+      <div className={terClass} onClick={this.handleClick(id, owner)}>
         <span className="ter-name">{I18n.t(`territories.${name}`)}</span>
       </div>
     );

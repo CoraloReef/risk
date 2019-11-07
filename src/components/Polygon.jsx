@@ -48,7 +48,7 @@ class Polygon extends React.Component {
 
     return (
       <Row>
-        <Col className="polygon">
+        <Col className="polygon mb-2">
           {territories.map((territory) => (
             <Ceil
               id={territory.id}
