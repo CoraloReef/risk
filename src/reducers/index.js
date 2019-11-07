@@ -22,6 +22,11 @@ const territories = handleActions({
       allIds: [...allIds, territory.id],
     };
   },
+  [actions.setTerritoryOwner](state, { payload: { id, owner } }) {
+    const { byId, allIds } = state;
+    byId[id].owner = owner;
+    return { byId, allIds };
+  },
 }, { byId: {}, allIds: [] });
 
 const players = handleActions({

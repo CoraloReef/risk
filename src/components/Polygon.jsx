@@ -55,6 +55,7 @@ class Polygon extends React.Component {
               name={territory.name}
               contynentId={territory.idContinent}
               key={territory.id}
+              owner={territory.owner}
             />
           ))}
           <div className="line greenland-1" />
