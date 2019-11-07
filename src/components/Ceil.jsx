@@ -21,8 +21,14 @@ const mapStateToProps = (state) => {
 
 class Ceil extends React.Component {
   handleClick = (id) => () => {
-    const { currentPlayerId, setTerritoryOwner } = this.props;
+    const { currentPlayerId, players, setTerritoryOwner, setCurrentPlayer } = this.props;
     setTerritoryOwner({ id, owner: currentPlayerId });
+
+    if (currentPlayerId !== players.length - 1) {
+      setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
+    } else {
+      setCurrentPlayer({ id: 0 });
+    }
   }
 
   render() {
