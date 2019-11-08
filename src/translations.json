@@ -61,7 +61,7 @@
       "current-player": "Player"
     },
     "phases": {
-      "start": "Start Game",
+      "start": "Game Settings",
       "territory allocation": "Territory Allocation",
       "troop deployment": "Troop Deployment",
       "reinforcement": "Reinforcement",
@@ -144,7 +144,7 @@
       "current-player": "Игрок"
     },
     "phases": {
-      "start": "Начало игры",
+      "start": "Настройки игры",
       "territory allocation": "Распределение территорий",
       "troop deployment": "Развертывание войск",
       "reinforcement": "Подкрепление",

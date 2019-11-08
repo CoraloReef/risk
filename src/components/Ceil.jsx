@@ -14,7 +14,12 @@ const mapStateToProps = (state) => {
   } = state;
   const players = allIds.map((id) => byId[id]);
 
-  return { gamePhase, currentPlayerId, players, locale };
+  return {
+    gamePhase,
+    currentPlayerId,
+    players,
+    locale,
+  };
 };
 
 @connect(mapStateToProps)
@@ -25,18 +30,29 @@ class Ceil extends React.Component {
       return null;
     }
 
-    const { currentPlayerId, players, setTerritoryOwner, setCurrentPlayer } = this.props;
+    const {
+      currentPlayerId,
+      players,
+      setTerritoryOwner,
+      setCurrentPlayer,
+    } = this.props;
+
     setTerritoryOwner({ id, owner: currentPlayerId });
 
     if (currentPlayerId !== players.length - 1) {
-      setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
-    } else {
-      setCurrentPlayer({ id: 0 });
+      return setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
     }
+    return setCurrentPlayer({ id: 0 });
   }
 
   render() {
-    const { id, name, contynentId, owner, players } = this.props;
+    const {
+      id,
+      name,
+      contynentId,
+      owner,
+      players,
+    } = this.props;
 
     const terClass = cn({
       territory: true,
@@ -47,7 +63,13 @@ class Ceil extends React.Component {
     });
 
     return (
-      <div className={terClass} onClick={this.handleClick(id, owner)}>
+      <div
+        className={terClass}
+        onClick={this.handleClick(id, owner)}
+        onKeyDown={this.handleClick(id, owner)}
+        role="button"
+        tabIndex="0"
+      >
         <span className="ter-name">{I18n.t(`territories.${name}`)}</span>
       </div>
     );

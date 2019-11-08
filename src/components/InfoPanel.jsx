@@ -13,7 +13,12 @@ const mapStateToProps = (state) => {
   } = state;
   const players = allIds.map((id) => byId[id]);
 
-  return { gamePhase, locale, currentPlayerId, players };
+  return {
+    gamePhase,
+    locale,
+    currentPlayerId,
+    players,
+  };
 };
 
 @connect(mapStateToProps)
