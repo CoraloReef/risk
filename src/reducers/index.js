@@ -27,6 +27,11 @@ const territories = handleActions({
     byId[id].owner = owner;
     return { byId, allIds };
   },
+  [actions.increaseTerritoryArmy](state, { payload: id }) {
+    const { byId, allIds } = state;
+    byId[id].armysCount += 1;
+    return { byId, allIds };
+  },
 }, { byId: {}, allIds: [] });
 
 const players = handleActions({

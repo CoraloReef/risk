@@ -26,7 +26,7 @@ const mapStateToProps = (state) => {
 
 class Ceil extends React.Component {
   handleClick = (id, owner) => () => {
-    if (owner) {
+    if (owner !== null) {
       return null;
     }
 
@@ -34,10 +34,12 @@ class Ceil extends React.Component {
       currentPlayerId,
       players,
       setTerritoryOwner,
+      increaseTerritoryArmy,
       setCurrentPlayer,
     } = this.props;
 
     setTerritoryOwner({ id, owner: currentPlayerId });
+    increaseTerritoryArmy(id);
 
     if (currentPlayerId !== players.length - 1) {
       return setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
@@ -58,7 +60,7 @@ class Ceil extends React.Component {
       territory: true,
       [name]: true,
       [`contynent-${contynentId}`]: true,
-      pointer: !owner,
+      pointer: owner === null,
       [players[owner] ? `bg-${players[owner].color}` : '']: players[owner],
     });
 
