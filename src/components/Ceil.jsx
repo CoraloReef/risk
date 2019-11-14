@@ -4,20 +4,24 @@ import { I18n } from 'react-redux-i18n';
 
 import connect from '../connect';
 
-
 const mapStateToProps = (state) => {
   const {
     gamePhase,
     currentPlayerId,
-    players: { byId, allIds },
     i18n: { locale },
   } = state;
-  const players = allIds.map((id) => byId[id]);
+
+  const players = state.players.allIds
+    .map((id) => state.players.byId[id]);
+
+  const territories = state.territories.allIds
+    .map((id) => state.territories.byId[id]);
 
   return {
     gamePhase,
     currentPlayerId,
     players,
+    territories,
     locale,
   };
 };
@@ -33,18 +37,26 @@ class Ceil extends React.Component {
     const {
       currentPlayerId,
       players,
+      territories,
       setTerritoryOwner,
       increaseTerritoryArmy,
       setCurrentPlayer,
+      setGamePhase,
     } = this.props;
 
     setTerritoryOwner({ id, owner: currentPlayerId });
     increaseTerritoryArmy(id);
 
-    if (currentPlayerId !== players.length - 1) {
-      return setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
+    if (currentPlayerId === players.length - 1) {
+      const emptyTerritories = territories.filter((i) => i.owner === null);
+
+      if (emptyTerritories.length === 0) {
+        setGamePhase({ phase: 'troop deployment' });
+      }
+
+      return setCurrentPlayer({ id: 0 });
     }
-    return setCurrentPlayer({ id: 0 });
+    return setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
   }
 
   render() {
