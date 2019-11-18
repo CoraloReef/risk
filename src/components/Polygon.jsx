@@ -52,10 +52,7 @@ class Polygon extends React.Component {
           {territories.map((territory) => (
             <Ceil
               id={territory.id}
-              name={territory.name}
-              contynentId={territory.idContinent}
               key={territory.id}
-              owner={territory.owner}
             />
           ))}
           <div className="line greenland-1" />

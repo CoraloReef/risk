@@ -67,6 +67,25 @@
   -moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.75);  
 }
+
+.territory-armys{
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  z-index: 1;
+  position: absolute;
+
+  text-align: center;
+  color: #ff0000;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 0px 4px 3px rgba(255, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 3px rgba(255, 0, 0, 0.75);
+  box-shadow: 0px 0px 4px 3px rgba(255, 0, 0, 0.75);
+}
+
 .ter-name{
   color: #313131;
 }

@@ -62,16 +62,21 @@ class Ceil extends React.Component {
   render() {
     const {
       id,
-      name,
-      contynentId,
-      owner,
       players,
+      territories,
     } = this.props;
+
+    const {
+      name,
+      idContinent,
+      owner,
+      armysCount,
+    } = territories.find((t) => t.id === id);
 
     const terClass = cn({
       territory: true,
       [name]: true,
-      [`contynent-${contynentId}`]: true,
+      [`contynent-${idContinent}`]: true,
       pointer: owner === null,
       [players[owner] ? `bg-${players[owner].color}` : '']: players[owner],
     });
@@ -84,6 +89,9 @@ class Ceil extends React.Component {
         role="button"
         tabIndex="0"
       >
+        {(armysCount !== null)
+          ? <div className="territory-armys">{armysCount}</div>
+          : null}
         <span className="ter-name">{I18n.t(`territories.${name}`)}</span>
       </div>
     );
