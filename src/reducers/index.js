@@ -5,7 +5,7 @@ import { i18nReducer } from 'react-redux-i18n';
 import * as actions from '../actions';
 
 const continents = handleActions({
-  [actions.addContinent](state, { payload: continent }) {
+  [actions.addContinent](state, { payload: { continent } }) {
     const { byId, allIds } = state;
     return {
       byId: { ...byId, [continent.id]: continent },
@@ -15,27 +15,25 @@ const continents = handleActions({
 }, { byId: {}, allIds: [] });
 
 const territories = handleActions({
-  [actions.addTerritory](state, { payload: territory }) {
+  [actions.addTerritory](state, { payload: { territory } }) {
     const { byId, allIds } = state;
     return {
       byId: { ...byId, [territory.id]: territory },
       allIds: [...allIds, territory.id],
     };
   },
-  [actions.setTerritoryOwner](state, { payload: { id, owner } }) {
+  [actions.updateTerritoryData](state, { payload: { territory } }) {
     const { byId, allIds } = state;
-    byId[id].owner = owner;
-    return { byId, allIds };
-  },
-  [actions.increaseTerritoryArmy](state, { payload: id }) {
-    const { byId, allIds } = state;
-    byId[id].armysCount += 1;
-    return { byId, allIds };
+    const { id } = territory;
+    return {
+      allIds,
+      byId: { ...byId, [id]: territory },
+    };
   },
 }, { byId: {}, allIds: [] });
 
 const players = handleActions({
-  [actions.addPlayer](state, { payload: player }) {
+  [actions.addPlayer](state, { payload: { player } }) {
     const { byId, allIds } = state;
     return {
       byId: { ...byId, [player.id]: player },

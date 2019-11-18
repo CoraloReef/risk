@@ -46,6 +46,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.0.4",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "faker": "^4.1.0",

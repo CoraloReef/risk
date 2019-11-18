@@ -38,12 +38,14 @@ class StartSettings extends React.Component {
     try {
       for (let i = 0, id = 0; i < playersCount; i += 1) {
         if (values[`player${i}Type`] !== 'disabled') {
-          addPlayer({
+          const player = {
             id,
             color: rowOptions[i].color,
             name: (values[`player${i}Name`] === undefined) ? rowOptions[i].name : values[`player${i}Name`],
             type: (values[`player${i}Type`] === undefined) ? 'human' : values[`player${i}Type`],
-          });
+          };
+
+          addPlayer({ player });
 
           id += 1;
         }

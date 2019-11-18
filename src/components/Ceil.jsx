@@ -29,7 +29,15 @@ const mapStateToProps = (state) => {
 @connect(mapStateToProps)
 
 class Ceil extends React.Component {
-  handleClick = (id, owner) => () => {
+  handleClick = (territory) => () => {
+    const {
+      id,
+      name,
+      contacts,
+      idContinent,
+      owner,
+    } = territory;
+
     if (owner !== null) {
       return null;
     }
@@ -38,14 +46,21 @@ class Ceil extends React.Component {
       currentPlayerId,
       players,
       territories,
-      setTerritoryOwner,
-      increaseTerritoryArmy,
+      updateTerritoryData,
       setCurrentPlayer,
       setGamePhase,
     } = this.props;
 
-    setTerritoryOwner({ id, owner: currentPlayerId });
-    increaseTerritoryArmy(id);
+    const territoryData = {
+      id,
+      name,
+      contacts,
+      idContinent,
+      owner: currentPlayerId,
+      armysCount: 1,
+    };
+
+    updateTerritoryData({ territory: territoryData });
 
     if (currentPlayerId === players.length - 1) {
       const emptyTerritories = territories.filter((i) => i.owner === null);
@@ -68,6 +83,7 @@ class Ceil extends React.Component {
 
     const {
       name,
+      contacts,
       idContinent,
       owner,
       armysCount,
@@ -81,11 +97,20 @@ class Ceil extends React.Component {
       [players[owner] ? `bg-${players[owner].color}` : '']: players[owner],
     });
 
+    const territoryData = {
+      id,
+      name,
+      contacts,
+      idContinent,
+      owner,
+      armysCount,
+    };
+
     return (
       <div
         className={terClass}
-        onClick={this.handleClick(id, owner)}
-        onKeyDown={this.handleClick(id, owner)}
+        onClick={this.handleClick(territoryData)}
+        onKeyDown={this.handleClick(territoryData)}
         role="button"
         tabIndex="0"
       >

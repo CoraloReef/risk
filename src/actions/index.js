@@ -7,6 +7,4 @@ export const addPlayer = createAction('PLAYER_ADD');
 export const setCurrentPlayer = createAction('CURRENT_PLAYER_SET');
 export const setGamePhase = createAction('GAME_PHASE_SET');
 
-export const setTerritoryOwner = createAction('TERRITORY_OWNER_SET');
-
-export const increaseTerritoryArmy = createAction('TERRITORY_ARMY_INCREASE');
+export const updateTerritoryData = createAction('TERRITORY_DATA_UPDATE');

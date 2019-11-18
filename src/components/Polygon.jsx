@@ -36,10 +36,10 @@ class Polygon extends React.Component {
           armysCount: null,
         };
 
-        addTerritory(territoryData);
+        addTerritory({ territory: territoryData });
       });
 
-      addContinent(continetData);
+      addContinent({ continent: continetData });
     });
   }
 
