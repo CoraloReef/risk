@@ -65,7 +65,7 @@ class Ceil extends React.Component {
     if (currentPlayerId === players.length - 1) {
       const emptyTerritories = territories.filter((i) => i.owner === null);
 
-      if (emptyTerritories.length === 0) {
+      if (emptyTerritories.length - 1 === 0) {
         setGamePhase({ phase: 'troop deployment' });
       }
 
