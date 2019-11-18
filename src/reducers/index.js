@@ -42,7 +42,7 @@ const players = createReducer({ byId: {}, allIds: [] }, {
   },
 });
 
-const currentPlayerId = createReducer('0', {
+const currentPlayerId = createReducer(0, {
   [actions.setCurrentPlayer]: (state, { payload: { id } }) => id,
 });
 

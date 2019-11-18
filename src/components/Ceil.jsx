@@ -71,7 +71,7 @@ class Ceil extends React.Component {
 
       return setCurrentPlayer({ id: 0 });
     }
-    return setCurrentPlayer({ id: Number(currentPlayerId) + 1 });
+    return setCurrentPlayer({ id: currentPlayerId + 1 });
   }
 
   render() {
