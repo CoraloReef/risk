@@ -29,6 +29,15 @@ const mapStateToProps = (state) => {
 @connect(mapStateToProps)
 
 class Ceil extends React.Component {
+  componentDidUpdate() {
+    const { territories, setGamePhase } = this.props;
+    const emptyTerritories = territories.filter((i) => i.owner === null);
+
+    if (emptyTerritories.length === 0) {
+      setGamePhase({ phase: 'troop deployment' });
+    }
+  }
+
   handleClick = (territory) => () => {
     const {
       id,
@@ -63,12 +72,6 @@ class Ceil extends React.Component {
     updateTerritoryData({ territory: territoryData });
 
     if (currentPlayerId === players.length - 1) {
-      const emptyTerritories = territories.filter((i) => i.owner === null);
-
-      if (emptyTerritories.length - 1 === 0) {
-        setGamePhase({ phase: 'troop deployment' });
-      }
-
       return setCurrentPlayer({ id: 0 });
     }
     return setCurrentPlayer({ id: currentPlayerId + 1 });
