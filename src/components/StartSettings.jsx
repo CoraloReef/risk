@@ -33,7 +33,7 @@ export default @reduxForm({ form: 'players' })
 class StartSettings extends React.Component {
   handleSubmitStartSettings = (values) => {
     const { addPlayer, setGamePhase } = this.props;
-    const phase = 'territory allocation';
+    const phase = 'territoryAllocation';
 
     try {
       for (let i = 0, id = 0; i < playersCount; i += 1) {

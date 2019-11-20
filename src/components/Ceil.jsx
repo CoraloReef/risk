@@ -34,7 +34,7 @@ class Ceil extends React.Component {
     const emptyTerritories = territories.filter((i) => i.owner === null);
 
     if (emptyTerritories.length === 0) {
-      setGamePhase({ phase: 'troop deployment' });
+      setGamePhase({ phase: 'troopDeployment' });
     }
   }
 
@@ -54,10 +54,8 @@ class Ceil extends React.Component {
     const {
       currentPlayerId,
       players,
-      territories,
       updateTerritoryData,
       setCurrentPlayer,
-      setGamePhase,
     } = this.props;
 
     const territoryData = {
