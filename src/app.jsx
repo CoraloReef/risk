@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { loadTranslations, setLocale, syncTranslationWithStore } from 'react-redux-i18n';
@@ -18,7 +18,7 @@ store.dispatch(loadTranslations(translationsObject));
 store.dispatch(setLocale('ru'));
 
 export default () => {
-  ReactDOM.render(
+  render(
     <Provider store={store}>
       <App />
     </Provider>,
