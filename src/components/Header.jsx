@@ -16,11 +16,13 @@ class Header extends React.Component {
   render() {
     return (
       <header className="mb-4">
-        <LanguagesSwitcher />
         <Container>
-          <Row>
+          <Row className="justify-content-between">
             <Col>
               <h1 className="heading">{I18n.t('app.heading')}</h1>
+            </Col>
+            <Col>
+              <LanguagesSwitcher />
             </Col>
           </Row>
         </Container>

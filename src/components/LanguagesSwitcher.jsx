@@ -33,7 +33,7 @@ class LanguagesSwitcher extends React.Component {
 
   render() {
     return (
-      <div className="lang-switcher links">
+      <div className="lang-switcher links text-right">
         <a href="#ru" className={this.getLanguageClass('ru')} onClick={this.handleSwitchLanguage('ru')}>RUS</a>
         <a href="#en" className={this.getLanguageClass('en')} onClick={this.handleSwitchLanguage('en')}>ENG</a>
       </div>
