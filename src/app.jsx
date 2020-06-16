@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import { I18nextProvider } from 'react-i18next';
+import i18next from 'i18next';
 
 import reducers from './reducers';
 
@@ -16,7 +18,9 @@ const store = configureStore({
 export default () => {
   render(
     <Provider store={store}>
-      <App />
+      <I18nextProvider i18n={i18next}>
+        <App />
+      </I18nextProvider>
     </Provider>,
     document.getElementById('root'),
   );

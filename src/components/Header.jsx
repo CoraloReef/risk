@@ -1,34 +1,33 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { I18n } from 'react-redux-i18n';
+import { useTranslation } from 'react-i18next';
 
-import connect from '../connect';
 import LanguagesSwitcher from './LanguagesSwitcher';
+import Loader from './Loader';
 
-const mapStateToProps = (state) => {
-  const { locale } = state.i18n;
-  return { locale };
+const Component = () => {
+  const { t } = useTranslation();
+
+  return (
+    <header className="mb-4">
+      <Container>
+        <Row className="justify-content-between">
+          <Col>
+            <h1 className="heading">{t('app.heading')}</h1>
+          </Col>
+          <Col>
+            <LanguagesSwitcher />
+          </Col>
+        </Row>
+      </Container>
+    </header>
+  );
 };
 
-@connect(mapStateToProps)
-
-class Header extends React.Component {
-  render() {
-    return (
-      <header className="mb-4">
-        <Container>
-          <Row className="justify-content-between">
-            <Col>
-              <h1 className="heading">{I18n.t('app.heading')}</h1>
-            </Col>
-            <Col>
-              <LanguagesSwitcher />
-            </Col>
-          </Row>
-        </Container>
-      </header>
-    );
-  }
-}
+const Header = () => (
+  <Suspense fallback={<Loader />}>
+    <Component />
+  </Suspense>
+);
 
 export default Header;

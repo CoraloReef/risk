@@ -1,44 +1,49 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import cn from 'classnames';
-import { setLocale } from 'react-redux-i18n';
-import { bindActionCreators } from 'redux';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const mapStateToProps = (state) => {
-  const { locale } = state.i18n;
-  return { locale };
-};
+const LanguagesSwitcher = () => {
+  const { i18n } = useTranslation();
 
-const mapDispatchToProps = (dispatch) => {
-  const action = { setLocale };
-  return {
-    action: bindActionCreators(action, dispatch),
-  };
-};
+  const [links, setLinks] = useState([
+    { name: 'RUS', lang: 'ru', classes: '' },
+    { name: 'ENG', lang: 'en', classes: '' },
+  ]);
 
-class LanguagesSwitcher extends React.Component {
-  handleSwitchLanguage = (language) => (e) => {
-    e.preventDefault();
+  const switchLanguage = (lang) => {
+    i18n.changeLanguage(lang);
 
-    const { action } = this.props;
-    action.setLocale(language);
-  }
-
-  getLanguageClass = (lang) => {
-    const { locale } = this.props;
-    return cn({
-      active: locale === lang,
+    const newLinks = links.map((link) => {
+      if (link.lang === lang) {
+        return { ...link, classes: 'active' };
+      }
+      return { ...link, classes: '' };
     });
-  }
 
-  render() {
-    return (
-      <div className="lang-switcher links text-right">
-        <a href="#ru" className={this.getLanguageClass('ru')} onClick={this.handleSwitchLanguage('ru')}>RUS</a>
-        <a href="#en" className={this.getLanguageClass('en')} onClick={this.handleSwitchLanguage('en')}>ENG</a>
-      </div>
-    );
-  }
-}
+    setLinks(newLinks);
+  };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LanguagesSwitcher);
+  useEffect(() => {
+    if (i18n.language !== 'ru' && i18n.language !== 'en') {
+      switchLanguage('en');
+    } else {
+      switchLanguage(i18n.language);
+    }
+  }, []);
+
+  return (
+    <div className="lang-menu">
+      {links.map(({ name, lang, classes }) => (
+        <button
+          type="button"
+          key={lang}
+          className={classes}
+          onClick={() => switchLanguage(lang)}
+        >
+          {name}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default LanguagesSwitcher;
