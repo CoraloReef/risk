@@ -1,0 +1,83 @@
+{
+  "app": {
+    "heading": "Risk онлайн"
+  },
+  "continents": {
+    "north-america": "Северная Америка",
+    "south-america": "Южная Америка",
+    "europe": "Европа",
+    "asia": "Азия",
+    "africa": "Африка",
+    "australia": "Австралия"
+  },
+  "territories": {
+    "alaska": "Аляска",
+    "north-canada": "Северная Канада",
+    "greenland": "Гринландия",
+    "alberta": "Альберта",
+    "ontario": "Онтарио",
+    "quebec": "Квебек",
+    "western-us": "Западные штаты",
+    "eastern-us": "Восточные штаты",
+    "central-america": "Центральная Америка",
+    "venezuela": "Венесуэла",
+    "peru": "Перу",
+    "brazil": "Бразилия",
+    "argentina": "Аргентина",
+    "iceland": "Исландия",
+    "scandinavia": "Скандинавия",
+    "great-britain": "Великобритания",
+    "northern-europe": "Северная Европа",
+    "western-russia": "Западная Россия",
+    "western-europe": "Западная Европа",
+    "southern-europe": "Южная Европа",
+    "ural": "Урал",
+    "syberia": "Сибирь",
+    "yakutsk": "Якутск",
+    "kamchatka": "Камчатка",
+    "irkutsk": "Иркутск",
+    "afganistan": "Афганистан",
+    "china": "Китай",
+    "mongolia": "Монголия",
+    "japan": "Япония",
+    "middle-east": "Ближний восток",
+    "india": "Индия",
+    "siam": "Сиам",
+    "north-africa": "Северная Африка",
+    "egypt": "Египет",
+    "congo": "Конго",
+    "east-africa": "Восточная Африка",
+    "south-africa": "Южная Африка",
+    "madagascar": "Мадагаскар",
+    "indonesia": "Индонезия",
+    "new-guinea": "Новая Гвинея",
+    "western-australia": "Западная Австралия",
+    "eastern-australia": "Восточная Австралия"
+  },
+  "info": {
+    "phase": "Фаза",
+    "round": "Раунд игры",
+    "current-player": "Игрок"
+  },
+  "phases": {
+    "start": "Настройки игры",
+    "territoryAllocation": "Распределение территорий",
+    "troopDeployment": "Развертывание войск",
+    "reinforcement": "Подкрепление",
+    "battleOrders": "Боевые приказы",
+    "battleResolution": "Атака",
+    "borderClash": "Пограничный конфликт",
+    "massInvasions": "Массовое вторжение",
+    "invasions": "Вторжение",
+    "spoilsOfWar": "Военная добыча",
+    "tacticalMove": "Тактическое передвижение"
+  },
+  "forms": {
+    "start-field-player": "Имя игрока",
+    "start-btn-submit": "Подтвердить",
+    "start-btn-submit-processing": "Подтверждение...",
+    "human": "Человек",
+    "ai": "ИИ",
+    "disabled": "Выключить"
+  }
+}

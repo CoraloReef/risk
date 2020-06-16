@@ -28,11 +28,11 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: './dist/static/img/[hash].[ext]',
+            name: './dist/public/img/[hash].[ext]',
           },
         }],
         include: [
-          path.resolve(__dirname, './static/img/'),
+          path.resolve(__dirname, '../public/img/'),
         ],
       },
       {
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
     }),
   ],
 };

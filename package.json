@@ -55,6 +55,8 @@
     "classnames": "^2.2.6",
     "faker": "^4.1.0",
     "i18next": "^17.3.1",
+    "i18next-browser-languagedetector": "^4.3.0",
+    "i18next-http-backend": "^1.0.15",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",

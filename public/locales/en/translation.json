@@ -1,0 +1,83 @@
+{
+  "app": {
+    "heading": "Risk online"
+  },
+  "continents": {
+    "north-america": "North America",
+    "south-america": "South America",
+    "europe": "Europe",
+    "asia": "Asia",
+    "africa": "Africa",
+    "australia": "Australia"
+  },
+  "territories": {
+    "alaska": "Alaska",
+    "north-canada": "North Canada",
+    "greenland": "Greenland",
+    "alberta": "Alberta",
+    "ontario": "Ontario",
+    "quebec": "Quebec",
+    "western-us": "Western US",
+    "eastern-us": "Eastern US",
+    "central-america": "Central America",
+    "venezuela": "Venezuela",
+    "peru": "Peru",
+    "brazil": "Brazil",
+    "argentina": "Argentina",
+    "iceland": "Iceland",
+    "scandinavia": "Scandinavia",
+    "great-britain": "Great Britain",
+    "northern-europe": "Northern Europe",
+    "western-russia": "Western Russia",
+    "western-europe": "Western Europe",
+    "southern-europe": "Southern Europe",
+    "ural": "Ural",
+    "syberia": "Syberia",
+    "yakutsk": "Yakutsk",
+    "kamchatka": "Kamchatka",
+    "irkutsk": "Irkutsk",
+    "afganistan": "Afganistan",
+    "china": "China",
+    "mongolia": "Mongolia",
+    "japan": "Japan",
+    "middle-east": "Middle East",
+    "india": "India",
+    "siam": "Siam",
+    "north-africa": "North Africa",
+    "egypt": "Egypt",
+    "congo": "Congo",
+    "east-africa": "East Africa",
+    "south-africa": "South Africa",
+    "madagascar": "Madagascar",
+    "indonesia": "Indonesia",
+    "new-guinea": "New Guinea",
+    "western-australia": "Western Australia",
+    "eastern-australia": "Eastern Australia"
+  },
+  "info": {
+    "phase": "Phase",
+    "round": "Game Round",
+    "current-player": "Player"
+  },
+  "phases": {
+    "start": "Game Settings",
+    "territoryAllocation": "Territory Allocation",
+    "troopDeployment": "Troop Deployment",
+    "reinforcement": "Reinforcement",
+    "battleOrders": "Battle Orders",
+    "battleResolution": "Battle Resolution",
+    "borderClash": "Border Clash",
+    "massInvasions": "Mass Invasions",
+    "invasions": "Invasions",
+    "spoilsOfWar": "Spoils of War",
+    "tacticalMove": "Tactical Move"
+  },
+  "forms": {
+    "start-field-player": "Player name",
+    "start-btn-submit": "Ok",
+    "start-btn-submit-processing": "Submiting...",
+    "human": "Human",
+    "ai": "AI",
+    "disabled": "Disabled"
+  }
+}
