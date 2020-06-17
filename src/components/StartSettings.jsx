@@ -27,9 +27,9 @@ const mapStateToProps = (state) => {
   return { locale };
 };
 
-export default @reduxForm({ form: 'players' })
+export default
+@reduxForm({ form: 'players' })
 @connect(mapStateToProps)
-
 class StartSettings extends React.Component {
   handleSubmitStartSettings = (values) => {
     const { addPlayer, setGamePhase } = this.props;
@@ -41,8 +41,11 @@ class StartSettings extends React.Component {
           const player = {
             id,
             color: rowOptions[i].color,
-            name: (values[`player${i}Name`] === undefined) ? rowOptions[i].name : values[`player${i}Name`],
-            type: (values[`player${i}Type`] === undefined) ? 'human' : values[`player${i}Type`],
+            name:
+              values[`player${i}Name`] === undefined
+                ? rowOptions[i].name
+                : values[`player${i}Name`],
+            type: values[`player${i}Type`] === undefined ? 'human' : values[`player${i}Type`],
           };
 
           addPlayer({ player });
@@ -82,9 +85,10 @@ class StartSettings extends React.Component {
             <Field
               name={`player${el.id}Type`}
               component="select"
-              className="form-control form-control-lg"
-            >
-              <option value="human" checked>{I18n.t('forms.human')}</option>
+              className="form-control form-control-lg">
+              <option value="human" checked>
+                {I18n.t('forms.human')}
+              </option>
               <option value="ai">{I18n.t('forms.ai')}</option>
               <option value="disabled">{I18n.t('forms.disabled')}</option>
             </Field>
@@ -92,7 +96,7 @@ class StartSettings extends React.Component {
         </Col>
       </Row>
     ));
-  }
+  };
 
   render() {
     const { handleSubmit, submitting } = this.props;
@@ -103,7 +107,6 @@ class StartSettings extends React.Component {
           <h2 className="mb-4">{I18n.t('phases.start')}</h2>
 
           <form onSubmit={handleSubmit(this.handleSubmitStartSettings)}>
-
             {this.generateRows()}
 
             <div className="text-center">
@@ -113,7 +116,6 @@ class StartSettings extends React.Component {
                   : I18n.t('forms.start-btn-submit')}
               </button>
             </div>
-
           </form>
         </Col>
       </Row>
