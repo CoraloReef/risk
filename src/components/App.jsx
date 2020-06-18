@@ -13,7 +13,6 @@ const mapStateToProps = (state) => {
 };
 
 @connect(mapStateToProps)
-
 class App extends React.Component {
   render() {
     const { gamePhase } = this.props;
@@ -23,14 +22,14 @@ class App extends React.Component {
         <Header />
         <section>
           <Container className="mb-4">
-            {(gamePhase === 'start')
-              ? <StartSettings />
-              : (
-                <>
-                  <Polygon />
-                  <InfoPanel />
-                </>
-              )}
+            {gamePhase === 'start' ? (
+              <StartSettings />
+            ) : (
+              <>
+                <Polygon />
+                <InfoPanel />
+              </>
+            )}
           </Container>
         </section>
       </>

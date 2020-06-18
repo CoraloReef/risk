@@ -11,11 +11,9 @@ const mapStateToProps = (state) => {
     i18n: { locale },
   } = state;
 
-  const players = state.players.allIds
-    .map((id) => state.players.byId[id]);
+  const players = state.players.allIds.map((id) => state.players.byId[id]);
 
-  const territories = state.territories.allIds
-    .map((id) => state.territories.byId[id]);
+  const territories = state.territories.allIds.map((id) => state.territories.byId[id]);
 
   return {
     gamePhase,
@@ -27,7 +25,6 @@ const mapStateToProps = (state) => {
 };
 
 @connect(mapStateToProps)
-
 class Ceil extends React.Component {
   componentDidUpdate() {
     const { territories, setGamePhase } = this.props;
@@ -39,24 +36,13 @@ class Ceil extends React.Component {
   }
 
   handleClick = (territory) => () => {
-    const {
-      id,
-      name,
-      contacts,
-      idContinent,
-      owner,
-    } = territory;
+    const { id, name, contacts, idContinent, owner } = territory;
 
     if (owner !== null) {
       return null;
     }
 
-    const {
-      currentPlayerId,
-      players,
-      updateTerritoryData,
-      setCurrentPlayer,
-    } = this.props;
+    const { currentPlayerId, players, updateTerritoryData, setCurrentPlayer } = this.props;
 
     const territoryData = {
       id,
@@ -73,22 +59,12 @@ class Ceil extends React.Component {
       return setCurrentPlayer({ id: 0 });
     }
     return setCurrentPlayer({ id: currentPlayerId + 1 });
-  }
+  };
 
   render() {
-    const {
-      id,
-      players,
-      territories,
-    } = this.props;
+    const { id, players, territories } = this.props;
 
-    const {
-      name,
-      contacts,
-      idContinent,
-      owner,
-      armysCount,
-    } = territories.find((t) => t.id === id);
+    const { name, contacts, idContinent, owner, armysCount } = territories.find((t) => t.id === id);
 
     const terClass = cn({
       territory: true,
@@ -115,9 +91,7 @@ class Ceil extends React.Component {
         role="button"
         tabIndex="0"
       >
-        {(armysCount !== null)
-          ? <div className="territory-armys">{armysCount}</div>
-          : null}
+        {armysCount !== null ? <div className="territory-armys">{armysCount}</div> : null}
         <span className="ter-name">{I18n.t(`territories.${name}`)}</span>
       </div>
     );

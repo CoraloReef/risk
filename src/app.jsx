@@ -5,14 +5,13 @@ import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 
-import reducers from './reducers';
+import reducer from './slices';
 
 import App from './components/App';
 
 import './i18n';
-
 const store = configureStore({
-  reducer: reducers,
+  reducer,
 });
 
 export default () => {
