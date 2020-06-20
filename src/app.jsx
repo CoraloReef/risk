@@ -10,6 +10,7 @@ import reducer from './slices';
 import App from './components/App';
 
 import './i18n';
+
 const store = configureStore({
   reducer,
 });

@@ -1,8 +1,11 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { I18n } from 'react-redux-i18n';
+import React, { Suspense } from 'react';
+import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
-import connect from '../connect';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import Loader from './Loader';
 
 const mapStateToProps = (state) => {
   const {
@@ -20,37 +23,38 @@ const mapStateToProps = (state) => {
     players,
   };
 };
+const actionCreators = {};
 
-@connect(mapStateToProps)
+const Component = (props) => {
+  const { t } = useTranslation();
 
-class InfoPanel extends React.Component {
-  render() {
-    const { gamePhase, currentPlayerId, players } = this.props;
+  const { gamePhase, currentPlayerId, players } = props;
 
-    return (
-      <Row>
-        <Col>
-          <p>
-            {I18n.t('info.phase')}
-            :
-            {' '}
-            {I18n.t(`phases.${gamePhase}`)}
-          </p>
-        </Col>
-        <Col xs={1}>
-          <div className={`player-color ${players[currentPlayerId].color}`} />
-        </Col>
-        <Col>
-          <p>
-            {I18n.t('info.current-player')}
-            :
-            {' '}
-            {players[currentPlayerId].name}
-          </p>
-        </Col>
-      </Row>
-    );
-  }
-}
+  return (
+    <Row>
+      <Col>
+        <p>
+          {t('info.phase')}: {t(`phases.${gamePhase}`)}
+        </p>
+      </Col>
+      <Col xs={1}>
+        <div className={`player-color ${players[currentPlayerId].color}`} />
+      </Col>
+      <Col>
+        <p>
+          {t('info.current-player')}: {players[currentPlayerId].name}
+        </p>
+      </Col>
+    </Row>
+  );
+};
+
+const ConnectComponent = connect(mapStateToProps, actionCreators)(Component);
+
+const InfoPanel = () => (
+  <Suspense fallback={<Loader />}>
+    <ConnectComponent />
+  </Suspense>
+);
 
 export default InfoPanel;
