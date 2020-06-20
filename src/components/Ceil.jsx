@@ -8,11 +8,7 @@ import { actions } from '../slices';
 import Loader from './Loader';
 
 const mapStateToProps = (state) => {
-  const {
-    gamePhase,
-    currentPlayerId,
-    i18n: { locale },
-  } = state;
+  const { gamePhase, currentPlayerId } = state;
 
   const players = state.players.allIds.map((id) => state.players.byId[id]);
 
@@ -23,7 +19,6 @@ const mapStateToProps = (state) => {
     currentPlayerId,
     players,
     territories,
-    locale,
   };
 };
 
@@ -78,7 +73,9 @@ const Component = (props) => {
     return setCurrentPlayer({ id: currentPlayerId + 1 });
   };
 
-  const { name, contacts, idContinent, owner, armysCount } = territories.find((t) => t.id === id);
+  const { name, contacts, idContinent, owner, armysCount } = territories.find(
+    (ter) => ter.id === id,
+  );
 
   const terClass = cn({
     territory: true,

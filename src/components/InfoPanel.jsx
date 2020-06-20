@@ -10,7 +10,6 @@ import Loader from './Loader';
 const mapStateToProps = (state) => {
   const {
     gamePhase,
-    i18n: { locale },
     currentPlayerId,
     players: { byId, allIds },
   } = state;
@@ -18,7 +17,6 @@ const mapStateToProps = (state) => {
 
   return {
     gamePhase,
-    locale,
     currentPlayerId,
     players,
   };
