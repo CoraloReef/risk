@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect, Suspense } from 'react';
+import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
-import { I18n } from 'react-redux-i18n';
 
-import connect from '../connect';
+import { actions } from '../slices';
+
+import Loader from './Loader';
 
 const mapStateToProps = (state) => {
   const {
@@ -24,25 +27,39 @@ const mapStateToProps = (state) => {
   };
 };
 
-@connect(mapStateToProps)
-class Ceil extends React.Component {
-  componentDidUpdate() {
-    const { territories, setGamePhase } = this.props;
+const actionCreators = {
+  setGamePhase: actions.setGamePhase,
+  setCurrentPlayer: actions.setCurrentPlayer,
+  updateTerritoryData: actions.updateTerritoryData,
+};
+
+const Component = (props) => {
+  const { t } = useTranslation();
+
+  const {
+    id,
+    players,
+    territories,
+    setGamePhase,
+    currentPlayerId,
+    updateTerritoryData,
+    setCurrentPlayer,
+  } = props;
+
+  useEffect(() => {
     const emptyTerritories = territories.filter((i) => i.owner === null);
 
     if (emptyTerritories.length === 0) {
       setGamePhase({ phase: 'troopDeployment' });
     }
-  }
+  }, [territories]);
 
-  handleClick = (territory) => () => {
+  const handleClick = (territory) => () => {
     const { id, name, contacts, idContinent, owner } = territory;
 
     if (owner !== null) {
       return null;
     }
-
-    const { currentPlayerId, players, updateTerritoryData, setCurrentPlayer } = this.props;
 
     const territoryData = {
       id,
@@ -61,41 +78,45 @@ class Ceil extends React.Component {
     return setCurrentPlayer({ id: currentPlayerId + 1 });
   };
 
-  render() {
-    const { id, players, territories } = this.props;
+  const { name, contacts, idContinent, owner, armysCount } = territories.find((t) => t.id === id);
 
-    const { name, contacts, idContinent, owner, armysCount } = territories.find((t) => t.id === id);
+  const terClass = cn({
+    territory: true,
+    [name]: true,
+    [`contynent-${idContinent}`]: true,
+    pointer: owner === null,
+    [players[owner] ? `bg-${players[owner].color}` : '']: players[owner],
+  });
 
-    const terClass = cn({
-      territory: true,
-      [name]: true,
-      [`contynent-${idContinent}`]: true,
-      pointer: owner === null,
-      [players[owner] ? `bg-${players[owner].color}` : '']: players[owner],
-    });
+  const territoryData = {
+    id,
+    name,
+    contacts,
+    idContinent,
+    owner,
+    armysCount,
+  };
 
-    const territoryData = {
-      id,
-      name,
-      contacts,
-      idContinent,
-      owner,
-      armysCount,
-    };
+  return (
+    <div
+      className={terClass}
+      onClick={handleClick(territoryData)}
+      onKeyDown={handleClick(territoryData)}
+      role="button"
+      tabIndex="0"
+    >
+      {armysCount !== null ? <div className="territory-armys">{armysCount}</div> : null}
+      <span className="ter-name">{t(`territories.${name}`)}</span>
+    </div>
+  );
+};
 
-    return (
-      <div
-        className={terClass}
-        onClick={this.handleClick(territoryData)}
-        onKeyDown={this.handleClick(territoryData)}
-        role="button"
-        tabIndex="0"
-      >
-        {armysCount !== null ? <div className="territory-armys">{armysCount}</div> : null}
-        <span className="ter-name">{I18n.t(`territories.${name}`)}</span>
-      </div>
-    );
-  }
-}
+const ConnectComponent = connect(mapStateToProps, actionCreators)(Component);
+
+const Ceil = () => (
+  <Suspense fallback={<Loader />}>
+    <ConnectComponent />
+  </Suspense>
+);
 
 export default Ceil;
