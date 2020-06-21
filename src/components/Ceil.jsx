@@ -1,11 +1,9 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
 import { actions } from '../slices';
-
-import Loader from './Loader';
 
 const mapStateToProps = (state) => {
   const { gamePhase, currentPlayerId } = state;
@@ -28,7 +26,7 @@ const actionCreators = {
   updateTerritoryData: actions.updateTerritoryData,
 };
 
-const Component = (props) => {
+const Ceil = (props) => {
   const { t } = useTranslation();
 
   const {
@@ -50,7 +48,7 @@ const Component = (props) => {
   }, [territories]);
 
   const handleClick = (territory) => () => {
-    const { id, name, contacts, idContinent, owner } = territory;
+    const { name, contacts, idContinent, owner } = territory;
 
     if (owner !== null) {
       return null;
@@ -74,7 +72,7 @@ const Component = (props) => {
   };
 
   const { name, contacts, idContinent, owner, armysCount } = territories.find(
-    (ter) => ter.id === id,
+    (territory) => territory.id === id,
   );
 
   const terClass = cn({
@@ -108,12 +106,4 @@ const Component = (props) => {
   );
 };
 
-const ConnectComponent = connect(mapStateToProps, actionCreators)(Component);
-
-const Ceil = () => (
-  <Suspense fallback={<Loader />}>
-    <ConnectComponent />
-  </Suspense>
-);
-
-export default Ceil;
+export default connect(mapStateToProps, actionCreators)(Ceil);
