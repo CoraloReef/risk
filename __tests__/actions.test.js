@@ -1,11 +1,13 @@
-import {
+import { actions } from '../src/slices';
+
+const {
   addContinent,
   addTerritory,
-  setCurrentPlayer,
   addPlayer,
-  setGamePhase,
   updateTerritoryData,
-} from '../src/actions';
+  setCurrentPlayer,
+  setGamePhase,
+} = actions;
 
 describe('>>> Test Actions', () => {
   it('test addContinent', () => {
@@ -18,7 +20,7 @@ describe('>>> Test Actions', () => {
       },
     });
     expect(continent).toEqual({
-      type: 'CONTINENT_ADD',
+      type: 'continents/addContinent',
       payload: {
         continent: {
           id: 1,
@@ -42,7 +44,7 @@ describe('>>> Test Actions', () => {
       },
     });
     expect(territory).toEqual({
-      type: 'TERRITORY_ADD',
+      type: 'territories/addTerritory',
       payload: {
         territory: {
           id: 1,
@@ -66,7 +68,7 @@ describe('>>> Test Actions', () => {
       },
     });
     expect(player).toEqual({
-      type: 'PLAYER_ADD',
+      type: 'players/addPlayer',
       payload: {
         player: {
           id: 1,
@@ -90,7 +92,7 @@ describe('>>> Test Actions', () => {
       },
     });
     expect(territory).toEqual({
-      type: 'TERRITORY_DATA_UPDATE',
+      type: 'territories/updateTerritoryData',
       payload: {
         territory: {
           id: 1,
@@ -106,11 +108,11 @@ describe('>>> Test Actions', () => {
 
   it('test setCurrentPlayer', () => {
     const id = setCurrentPlayer(1);
-    expect(id).toEqual({ type: 'CURRENT_PLAYER_SET', payload: 1 });
+    expect(id).toEqual({ type: 'currentPlayerId/setCurrentPlayer', payload: 1 });
   });
 
   it('test setGamePhase', () => {
     const phase = setGamePhase('territory allocation');
-    expect(phase).toEqual({ type: 'GAME_PHASE_SET', payload: 'territory allocation' });
+    expect(phase).toEqual({ type: 'gamePhase/setGamePhase', payload: 'territory allocation' });
   });
 });
