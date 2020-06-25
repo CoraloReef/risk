@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 
+import LanguagesSwitcher from './LanguagesSwitcher';
 import Header from './Header';
 import StartSettings from './StartSettings';
 import Polygon from './Polygon';
@@ -20,6 +21,7 @@ const Component = (props) => {
 
   return (
     <>
+      <LanguagesSwitcher />
       <Header />
       <section>
         <Container className="mb-4">

@@ -1,69 +1,86 @@
-.links > a{
-  color: #636b6f;
-  padding: 0 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.links > a.active{
-  text-decoration: underline;
+@import './variables';
+@import '~bootstrap/scss/bootstrap.scss';
+
+.lang-menu {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+
+  button {
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background: none;
+    border: none;
+
+    &.active {
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
-.pointer:hover{
-  cursor: pointer;
+.pointer {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.player-color{
+.player-color {
   height: 70%;
+
+  &.red {
+    background-color: #ff0000;
+  }
+  &.blue {
+    background-color: #0000ff;
+  }
+  &.yellow {
+    background-color: #ffff00;
+  }
+  &.green {
+    background-color: #00ff00;
+  }
+  &.purple {
+    background-color: #bb00ff;
+  }
+  &.orange {
+    background-color: #f47d1c;
+  }
 }
 
-.player-color.red{
-  background-color: #ff0000;
-}
-.player-color.blue{
-  background-color: #0000ff;
-}
-.player-color.yellow{
-  background-color: #ffff00;
-}
-.player-color.green{
-  background-color: #00ff00;
-}
-.player-color.purple{
-  background-color: #bb00ff;
-}
-.player-color.orange{
-  background-color: #f47d1c;
-}
-
-.polygon{
+.polygon {
   position: relative;
   background-image: url('/public/img/ancient_map.png');
   height: 800px;
 
   -webkit-box-shadow: inset 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    inset 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         inset 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: inset 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: inset 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
 }
 
-.territory{
+.territory {
   text-align: center;
   font-size: 0.8rem;
 
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
 
   position: absolute;
 
   -webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.75);
 }
 
-.territory-armys{
+.territory-armys {
   width: 20px;
   height: 20px;
   top: 10px;
@@ -81,127 +98,129 @@
   box-shadow: 0px 0px 4px 3px rgba(255, 0, 0, 0.75);
 }
 
-.ter-name{
+.ter-name {
   color: #313131;
 }
 
-.contynent-1{
+.contynent-1 {
   background-color: rgba(0, 0, 255, 0.1);
 }
-.contynent-2{
+.contynent-2 {
   background-color: rgba(204, 0, 255, 0.1);
 }
-.contynent-3{
+.contynent-3 {
   background-color: rgba(0, 255, 106, 0.1);
 }
-.contynent-4{
+.contynent-4 {
   background-color: rgba(251, 255, 0, 0.1);
 }
-.contynent-5{
+.contynent-5 {
   background-color: rgba(255, 0, 0, 0.1);
 }
-.contynent-6{
+.contynent-6 {
   background-color: rgba(0, 255, 255, 0.1);
 }
 
-.bg-red{
+.bg-red {
   background-color: rgba(255, 0, 0, 0.5);
 }
-.bg-blue{
+.bg-blue {
   background-color: rgba(0, 0, 255, 0.5);
 }
-.bg-yellow{
+.bg-yellow {
   background-color: rgba(255, 255, 0, 0.5);
 }
-.bg-green{
+.bg-green {
   background-color: rgba(0, 255, 0, 0.5);
 }
-.bg-purple{
+.bg-purple {
   background-color: rgba(187, 0, 255, 0.5);
 }
-.bg-orange{
+.bg-orange {
   background-color: rgba(244, 125, 28, 0.5);
 }
 
 /* North America */
-.alaska{
+.alaska {
   width: 60px;
   height: 70px;
   top: 100px;
   left: 60px;
 }
-.north-canada{
+.north-canada {
   width: 120px;
   height: 50px;
   top: 100px;
   left: 120px;
 }
-.alberta{
+.alberta {
   width: 60px;
   height: 60px;
   top: 150px;
   left: 120px;
 }
-.ontario{
+.ontario {
   width: 60px;
   height: 60px;
   top: 150px;
   left: 180px;
 }
-.quebec{
+.quebec {
   width: 60px;
   height: 60px;
   top: 150px;
   left: 240px;
 }
-.greenland{
+.greenland {
   width: 80px;
   height: 90px;
   top: 50px;
   left: 280px;
 }
-.western-us{
+.western-us {
   width: 80px;
   height: 80px;
   top: 210px;
   left: 120px;
 }
-.eastern-us{
+.eastern-us {
   width: 80px;
   height: 80px;
   top: 210px;
   left: 200px;
 }
-.central-america{
+.central-america {
   width: 70px;
   height: 120px;
   top: 290px;
   left: 135px;
 }
-.central-america span{
-  transform: rotate(90deg);
+.central-america {
+  span {
+    transform: rotate(90deg);
+  }
 }
 
 /* South America */
-.venezuela{
+.venezuela {
   width: 130px;
   height: 50px;
   top: 410px;
   left: 160px;
 }
-.peru{
+.peru {
   width: 50px;
   height: 130px;
   top: 460px;
   left: 140px;
 }
-.brazil{
+.brazil {
   width: 130px;
   height: 130px;
   top: 460px;
   left: 190px;
 }
-.argentina{
+.argentina {
   width: 90px;
   height: 130px;
   top: 590px;
@@ -209,50 +228,54 @@
 }
 
 /* Europe */
-.iceland{
+.iceland {
   width: 70px;
   height: 40px;
   top: 110px;
   left: 440px;
 }
-.great-britain{
+.great-britain {
   width: 50px;
   height: 70px;
   top: 160px;
   left: 420px;
 }
-.great-britain span{
-  transform: rotate(60deg);
-  font-size: 0.6rem;
+.great-britain {
+  span {
+    transform: rotate(60deg);
+    font-size: 0.6rem;
+  }
 }
-.western-europe{
+.western-europe {
   width: 120px;
   height: 50px;
   top: 240px;
   left: 410px;
 }
-.northern-europe{
+.northern-europe {
   width: 70px;
   height: 50px;
   top: 200px;
   left: 530px;
 }
-.southern-europe{
+.southern-europe {
   width: 70px;
   height: 50px;
   top: 250px;
   left: 530px;
 }
-.scandinavia{
+.scandinavia {
   width: 40px;
   height: 100px;
   top: 80px;
   left: 560px;
 }
-.scandinavia span{
-  transform: rotate(90deg);
+.scandinavia {
+  span {
+    transform: rotate(90deg);
+  }
 }
-.western-russia{
+.western-russia {
   width: 130px;
   height: 200px;
   top: 80px;
@@ -260,80 +283,84 @@
 }
 
 /* Asia */
-.ural{
+.ural {
   width: 60px;
   height: 160px;
   top: 65px;
   left: 730px;
 }
-.syberia{
+.syberia {
   width: 80px;
   height: 175px;
   top: 50px;
   left: 790px;
 }
-.yakutsk{
+.yakutsk {
   width: 80px;
   height: 50px;
   top: 65px;
   left: 870px;
 }
-.irkutsk{
+.irkutsk {
   width: 80px;
   height: 50px;
   top: 115px;
   left: 870px;
 }
-.mongolia{
+.mongolia {
   width: 80px;
   height: 60px;
   top: 165px;
   left: 870px;
 }
-.afganistan{
+.afganistan {
   width: 60px;
   height: 55px;
   top: 225px;
   left: 730px;
 }
-.afganistan span{
-  transform: rotate(45deg);
-  font-size: 0.7rem;
+.afganistan {
+  span {
+    transform: rotate(45deg);
+    font-size: 0.7rem;
+  }
 }
-.kamchatka{
+.kamchatka {
   width: 70px;
   height: 120px;
   top: 65px;
   left: 950px;
 }
-.china{
+.china {
   width: 130px;
   height: 55px;
   top: 225px;
   left: 790px;
 }
-.japan{
+.japan {
   width: 30px;
   height: 60px;
   top: 190px;
   left: 955px;
 }
-.japan span{
-  transform: rotate(90deg);
+.japan {
+  span {
+    transform: rotate(90deg);
+  }
 }
-.middle-east{
+.middle-east {
   width: 150px;
   height: 100px;
   top: 280px;
   left: 600px;
 }
-.india{
+.india {
   width: 70px;
   height: 150px;
   top: 280px;
   left: 750px;
 }
-.siam{
+.siam {
   width: 70px;
   height: 80px;
   top: 280px;
@@ -341,66 +368,68 @@
 }
 
 /* Africa */
-.north-africa{
+.north-africa {
   width: 120px;
   height: 140px;
   top: 330px;
   left: 410px;
 }
-.egypt{
+.egypt {
   width: 70px;
   height: 70px;
   top: 330px;
   left: 530px;
 }
-.east-africa{
+.east-africa {
   width: 100px;
   height: 160px;
   top: 400px;
   left: 530px;
 }
-.congo{
+.congo {
   width: 60px;
   height: 90px;
   top: 470px;
   left: 470px;
 }
-.south-africa{
+.south-africa {
   width: 100px;
   height: 150px;
   top: 560px;
   left: 510px;
 }
-.madagascar{
+.madagascar {
   width: 30px;
   height: 100px;
   top: 570px;
   left: 620px;
 }
-.madagascar span{
-  transform: rotate(90deg);
+.madagascar {
+  span {
+    transform: rotate(90deg);
+  }
 }
 
 /* Australia */
-.indonesia{
+.indonesia {
   width: 100px;
   height: 40px;
   top: 400px;
   left: 850px;
 }
-.new-guinea{
+.new-guinea {
   width: 80px;
   height: 50px;
   top: 370px;
   left: 960px;
 }
-.western-australia{
+.western-australia {
   width: 90px;
   height: 120px;
   top: 460px;
   left: 880px;
 }
-.eastern-australia{
+.eastern-australia {
   width: 90px;
   height: 160px;
   top: 440px;
@@ -408,169 +437,169 @@
 }
 
 /* Lines */
-.line{
+.line {
   background-color: #ff5100;
   height: 1px;
   position: absolute;
 
   -webkit-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 1px 4px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 1px 4px 0px rgba(50, 50, 50, 0.75);
-}
+  -moz-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
 
-.line.greenland-1{
-  width: 40px;
-  top: 100px;
-  left: 240px;
-  transform: rotate(0deg);
-}
-.line.greenland-2{
-  width: 63px;
-  top: 125px;
-  left: 229px;
-  transform: rotate(-50deg);
-}
-.line.greenland-3{
-  width: 11px;
-  top: 144px;
-  left: 286px;
-  transform: rotate(90deg);
-}
-.line.greenland-4{
-  width: 100px;
-  top: 105px;
-  left: 350px;
-  transform: rotate(37deg);
-}
-.line.iceland-1{
-  width: 55px;
-  top: 169px;
-  left: 462px;
-  transform: rotate(134deg);
-}
-.line.iceland-2{
-  width: 60px;
-  top: 162px;
-  left: 504px;
-  transform: rotate(25deg);
-}
-.line.great-britain-1{
-  width: 92px;
-  top: 183px;
-  left: 469px;
-  transform: rotate(-10deg);
-}
-.line.great-britain-2{
-  width: 65px;
-  top: 203px;
-  left: 467px;
-  transform: rotate(21deg);
-}
-.line.great-britain-3{
-  width: 11px;
-  top: 234px;
-  left: 439px;
-  transform: rotate(90deg);
-}
-.line.scandinavia-1{
-  width: 21px;
-  top: 189px;
-  left: 560px;
-  transform: rotate(90deg);
-}
-.line.brazil-1{
-  width: 100px;
-  top: 470px;
-  left: 315px;
-  transform: rotate(155deg);
-}
-.line.north-africa-1{
-  width: 41px;
-  top: 310px;
-  left: 424px;
-  transform: rotate(90deg);
-}
-.line.north-africa-2{
-  width: 38px;
-  top: 315px;
-  left: 504px;
-  transform: rotate(125deg);
-}
-.line.egypt-1{
-  width: 31px;
-  top: 314px;
-  left: 550px;
-  transform: rotate(90deg);
-}
-.line.east-africa-1{
-  width: 26px;
-  top: 390px;
-  left: 624px;
-  transform: rotate(125deg);
-}
-.line.madagascar-1{
-  width: 11px;
-  top: 564px;
-  left: 619px;
-  transform: rotate(90deg);
-}
-.line.madagascar-2{
-  width: 11px;
-  top: 620px;
-  left: 610px;
-  transform: rotate(0deg);
-}
-.line.japan-1{
-  width: 6px;
-  top: 187px;
-  left: 966px;
-  transform: rotate(90deg);
-}
-.line.japan-2{
-  width: 6px;
-  top: 207px;
-  left: 950px;
-  transform: rotate(0deg);
-}
-.line.kamchatka-1{
-  width: 120px;
-  top: 115px;
-  left: 1019px;
-  transform: rotate(0deg);
-}
-.line.alaska-1{
-  width: 60px;
-  top: 115px;
-  left: 0px;
-  transform: rotate(0deg);
-}
-.line.siam-1{
-  width: 41px;
-  top: 379px;
-  left: 849px;
-  transform: rotate(90deg);
-}
-.line.indonesia-1{
-  width: 11px;
-  top: 409px;
-  left: 950px;
-  transform: rotate(0deg);
-}
-.line.indonesia-2{
-  width: 21px;
-  top: 450px;
-  left: 935px;
-  transform: rotate(90deg);
-}
-.line.new-guinea-1{
-  width: 51px;
-  top: 440px;
-  left: 934px;
-  transform: rotate(125deg);
-}
-.line.new-guinea-2{
-  width: 21px;
-  top: 429px;
-  left: 990px;
-  transform: rotate(90deg);
+  &.greenland-1 {
+    width: 40px;
+    top: 100px;
+    left: 240px;
+    transform: rotate(0deg);
+  }
+  &.greenland-2 {
+    width: 63px;
+    top: 125px;
+    left: 229px;
+    transform: rotate(-50deg);
+  }
+  &.greenland-3 {
+    width: 11px;
+    top: 144px;
+    left: 286px;
+    transform: rotate(90deg);
+  }
+  &.greenland-4 {
+    width: 100px;
+    top: 105px;
+    left: 350px;
+    transform: rotate(37deg);
+  }
+  &.iceland-1 {
+    width: 55px;
+    top: 169px;
+    left: 462px;
+    transform: rotate(134deg);
+  }
+  &.iceland-2 {
+    width: 60px;
+    top: 162px;
+    left: 504px;
+    transform: rotate(25deg);
+  }
+  &.great-britain-1 {
+    width: 92px;
+    top: 183px;
+    left: 469px;
+    transform: rotate(-10deg);
+  }
+  &.great-britain-2 {
+    width: 65px;
+    top: 203px;
+    left: 467px;
+    transform: rotate(21deg);
+  }
+  &.great-britain-3 {
+    width: 11px;
+    top: 234px;
+    left: 439px;
+    transform: rotate(90deg);
+  }
+  &.scandinavia-1 {
+    width: 21px;
+    top: 189px;
+    left: 560px;
+    transform: rotate(90deg);
+  }
+  &.brazil-1 {
+    width: 100px;
+    top: 470px;
+    left: 315px;
+    transform: rotate(155deg);
+  }
+  &.north-africa-1 {
+    width: 41px;
+    top: 310px;
+    left: 424px;
+    transform: rotate(90deg);
+  }
+  &.north-africa-2 {
+    width: 38px;
+    top: 315px;
+    left: 504px;
+    transform: rotate(125deg);
+  }
+  &.egypt-1 {
+    width: 31px;
+    top: 314px;
+    left: 550px;
+    transform: rotate(90deg);
+  }
+  &.east-africa-1 {
+    width: 26px;
+    top: 390px;
+    left: 624px;
+    transform: rotate(125deg);
+  }
+  &.madagascar-1 {
+    width: 11px;
+    top: 564px;
+    left: 619px;
+    transform: rotate(90deg);
+  }
+  &.madagascar-2 {
+    width: 11px;
+    top: 620px;
+    left: 610px;
+    transform: rotate(0deg);
+  }
+  &.japan-1 {
+    width: 6px;
+    top: 187px;
+    left: 966px;
+    transform: rotate(90deg);
+  }
+  &.japan-2 {
+    width: 6px;
+    top: 207px;
+    left: 950px;
+    transform: rotate(0deg);
+  }
+  &.kamchatka-1 {
+    width: 120px;
+    top: 115px;
+    left: 1019px;
+    transform: rotate(0deg);
+  }
+  &.alaska-1 {
+    width: 60px;
+    top: 115px;
+    left: 0px;
+    transform: rotate(0deg);
+  }
+  &.siam-1 {
+    width: 41px;
+    top: 379px;
+    left: 849px;
+    transform: rotate(90deg);
+  }
+  &.indonesia-1 {
+    width: 11px;
+    top: 409px;
+    left: 950px;
+    transform: rotate(0deg);
+  }
+  &.indonesia-2 {
+    width: 21px;
+    top: 450px;
+    left: 935px;
+    transform: rotate(90deg);
+  }
+  &.new-guinea-1 {
+    width: 51px;
+    top: 440px;
+    left: 934px;
+    transform: rotate(125deg);
+  }
+  &.new-guinea-2 {
+    width: 21px;
+    top: 429px;
+    left: 990px;
+    transform: rotate(90deg);
+  }
 }

@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import LanguagesSwitcher from './LanguagesSwitcher';
 import Loader from './Loader';
 
 const Component = () => {
@@ -14,9 +13,6 @@ const Component = () => {
         <Row className="justify-content-between">
           <Col>
             <h1 className="heading">{t('app.heading')}</h1>
-          </Col>
-          <Col>
-            <LanguagesSwitcher />
           </Col>
         </Row>
       </Container>
