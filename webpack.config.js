@@ -20,20 +20,20 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.s[ac]ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: './dist/public/img/[hash].[ext]',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './dist/public/img/[hash].[ext]',
+            },
           },
-        }],
-        include: [
-          path.resolve(__dirname, '../public/img/'),
         ],
+        include: [path.resolve(__dirname, '../public/img/')],
       },
       {
         test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,

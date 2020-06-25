@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/app.css';
+import 'bootstrap/scss/bootstrap.scss';
+import './styles/app.scss';
 
 import init from './app';
 
