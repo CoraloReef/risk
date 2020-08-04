@@ -77,33 +77,31 @@ const Component = (props) => {
     setGamePhase({ phase });
   };
 
-  const generateRows = () => {
-    return rowOptions.map((el) => (
-      <Row key={el.color}>
-        <Col xs={1}>
-          <div className={`player-color ${el.color}`} />
-        </Col>
-        <Col xs={8}>
-          <Form.Control
-            name={`player${el.id}Name`}
-            value={form[`player${el.id}Name`]}
-            onChange={handleChange}
-            type="text"
-            placeholder={el.name}
-          />
-        </Col>
-        <Col xs={3}>
-          <Form.Control as="select" name={`player${el.id}Type`} onChange={handleChange}>
-            <option value="human" checked>
-              {t('forms.human')}
-            </option>
-            <option value="ai">{t('forms.ai')}</option>
-            <option value="disabled">{t('forms.disabled')}</option>
-          </Form.Control>
-        </Col>
-      </Row>
-    ));
-  };
+  const fields = rowOptions.map((el) => (
+    <Row key={el.color}>
+      <Col xs={1}>
+        <div className={`player-color ${el.color}`} />
+      </Col>
+      <Col xs={8}>
+        <Form.Control
+          name={`player${el.id}Name`}
+          value={form[`player${el.id}Name`]}
+          onChange={handleChange}
+          type="text"
+          placeholder={el.name}
+        />
+      </Col>
+      <Col xs={3}>
+        <Form.Control as="select" name={`player${el.id}Type`} onChange={handleChange}>
+          <option value="human" checked>
+            {t('forms.human')}
+          </option>
+          <option value="ai">{t('forms.ai')}</option>
+          <option value="disabled">{t('forms.disabled')}</option>
+        </Form.Control>
+      </Col>
+    </Row>
+  ));
 
   return (
     <Row className="justify-content-md-center">
@@ -111,7 +109,7 @@ const Component = (props) => {
         <h2 className="mb-4">{t('phases.start')}</h2>
 
         <Form>
-          {generateRows()}
+          {fields}
 
           <div className="text-center">
             <Button variant="primary" type="submit" onClick={handleSubmitSettings}>
