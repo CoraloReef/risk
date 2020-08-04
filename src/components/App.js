@@ -28,11 +28,11 @@ const Component = (props) => {
           {gamePhase === 'start' ? (
             <StartSettings />
           ) : (
-            <>
-              <Polygon />
-              <InfoPanel />
-            </>
-          )}
+              <>
+                <Polygon />
+                <InfoPanel />
+              </>
+            )}
         </Container>
       </section>
     </>
